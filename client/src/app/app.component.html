@@ -1,5 +1,12 @@
-<div style="text-align:center">
-    <h1>
-        Welcome to our {{title}}
-    </h1>
-</div>
+<body>
+	<div class="container header">
+		<app-nav-bar></app-nav-bar>
+	</div>
+
+	<div class="container central" id="centralPanel">
+		<div class="main">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+	<app-footer></app-footer>
+</body>

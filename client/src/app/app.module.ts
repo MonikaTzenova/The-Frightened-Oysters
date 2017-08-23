@@ -1,23 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {routing} from './app.routing';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    SignUpComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
+	HttpModule,
+	routing,
   ],
   providers: [],
-  bootstrap: [NavBarComponent, AppComponent, FooterComponent]
+  bootstrap: [AppComponent]
 })
 
 export class AppModule { }
