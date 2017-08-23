@@ -43,6 +43,8 @@
 		 - imagesUrl: *[string]*
  - **[PUT] /api/products**
 	 - same as POST
+ - **[DELETE] /api/products/:id**
+	 - cookie: *authenticated*
  - **[GET] /api/orderHistory**
 	 - cookie: *authenticated*
 		 - queries:
