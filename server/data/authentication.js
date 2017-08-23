@@ -1,6 +1,5 @@
 const userStorage = require('./storage/user');
 const sessionStorage = require('./storage/session');
-const helper = require('./storage/helper');
 
 const register = function(params) {
     const promise = new Promise(function(resolve, reject) {
@@ -27,12 +26,11 @@ const login = function(params) {
     const promise = new Promise((resolve, reject) => {
         return userStorage.fetch()
             .then(users => {
-                users = helper.decrypt(users);
                 const userToLogin = users.find(user => user.username === params.username && user.password === params.password);
                 if (userToLogin) {
                     return sessionStorage.create(params.username);
                 } else {
-                    reject(new Error({type: 'auth.invalidCredentials', message: 'Invalid credentials'}));
+                    reject({type: 'auth.invalidCredentials', message: 'Invalid credentials'});
                 }
             })
             .then(createdSession => {
@@ -50,7 +48,28 @@ const login = function(params) {
     return promise;
 };
 
+const validateSession = function(cookie) {
+    const promise = new Promise((resolve, reject) => {
+        return sessionStorage.fetch()
+            .then(sessions => {
+                const errorSessionObj = {type: 'auth.invalidSession', message: 'Invalid Session'}; 
+
+                var currentSession = sessions.find(session => session.session === cookie);
+                if (currentSession) {
+                    let now = Date.now();
+                    let cookieExpireTime = new Date(currentSession.expireTime).getTime();
+                    return now > cookieExpireTime ? reject(errorSessionObj) : resolve(currentSession);
+                } else {
+                    reject(errorSessionObj);
+                }
+            });
+    });
+
+    return promise;
+};
+
 module.exports = {
     register,
-    login
+    login,
+    validateSession
 };

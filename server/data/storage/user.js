@@ -18,7 +18,8 @@ const fetch = function() {
                 return;
             }
 
-            resolve(data);
+            const users = helper.decrypt(data);
+            resolve(users);
         });
     });
 
@@ -29,8 +30,6 @@ const create = function(params) {
     let promise = new Promise((resolve, reject) => {
         fetch()
             .then(users => {
-                users = helper.decrypt(users);
-
                 let newUserId = 1;
                 const lastUser = users[users.length - 1];
                 if (lastUser) {
@@ -59,7 +58,61 @@ const create = function(params) {
     return promise;
 };
 
+const edit = function(params) {
+    let promise = new Promise((resolve, reject) => {
+        fetch()
+            .then(users => {
+                users = users.map(user => {
+                    if (user.username === params.username) {
+                        user.password = params.password;
+                        user.company = params.company;
+                        user.phone = params.phone;
+                        user.address = params.address;
+                        user.email = params.email;
+                        user.avatarUrl = params.avatarUrl;
+                    }
+
+                    return user;
+                });
+
+                const dataToWrite = helper.encrypt(users);
+                fs.writeFile(userFilePath, dataToWrite, (err) => {
+                    if (err) {
+                        reject(err);
+                        return;
+                    }
+
+                    resolve(params);
+                });
+            })
+            .catch(err => {
+                reject(err);
+            });
+    });
+
+    return promise;
+};
+
+const get = function(username) {
+    let promise = new Promise((resolve, reject) => {
+        fs.readFile(userFilePath, (err, data) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+
+            const users = helper.decrypt(data);
+            const user = users.find(u => u.username === username);
+            resolve(user);
+        });
+    });
+
+    return promise;
+};
+
 module.exports = {
     create,
-    fetch
+    fetch,
+    edit,
+    get
 };

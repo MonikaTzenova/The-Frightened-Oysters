@@ -9,7 +9,12 @@ const login = {
                 return reply(response);
             })
             .catch(error => {
-                return reply(`Error - ${error.message}`);
+                return reply({
+                    error: {
+                        type: error.type || 'unknown',
+                        message: `Error - ${error.message}`
+                    }
+                });
             });
     }
 };
@@ -23,7 +28,12 @@ const register = {
                 return reply(response);
             })
             .catch(error => {
-                return reply(`Error - ${error.message}`);
+                return reply({
+                    error: {
+                        type: error.type || 'unknown',
+                        message: `Error - ${error.message}`
+                    }
+                });
             });
     }
 };
