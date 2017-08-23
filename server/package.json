@@ -10,6 +10,7 @@
   "author": "Simeon Petkov",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^16.5.2"
+    "hapi": "^16.5.2",
+    "uuid": "^3.1.0"
   }
 }
