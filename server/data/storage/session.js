@@ -19,7 +19,8 @@ const fetch = function() {
                 return;
             }
 
-            resolve(data);
+            const sessions = helper.decrypt(data);
+            resolve(sessions);
         });
     });
 
@@ -30,8 +31,6 @@ const create = function(username) {
     let promise = new Promise((resolve, reject) => {
         fetch()
             .then(sessions => {
-                sessions = helper.decrypt(sessions);
-
                 // remove users session if already exists
                 sessions = sessions.filter(session => session.username !== username);
 
@@ -64,5 +63,6 @@ const create = function(username) {
 };
 
 module.exports = {
-    create
+    create,
+    fetch
 };
