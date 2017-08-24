@@ -21,7 +21,8 @@ const routes = [
 
     // Orders
     order.add,
-    order.fetch
+    order.fetch,
+    order.get
 ];
 
 module.exports = routes;

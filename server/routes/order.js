@@ -57,7 +57,31 @@ const fetch = {
     }
 };
 
+const get = {
+    method: 'GET',
+    path: '/api/orders/{id}',
+    handler: function(request, reply) {
+        const cookie = helper.getCookie(request.headers);
+        return authenticationData.validateSession(cookie)
+            .then(sessionObj => {
+                return orderData.getById(parseInt(request.params.id), sessionObj.username);
+            })
+            .then(order => {
+                return reply(order);
+            })
+            .catch(error => {
+                return reply({
+                    error: {
+                        type: error.type || 'unknown',
+                        message: `Error - ${error.message}`
+                    }
+                });
+            });
+    }
+};
+
 module.exports = {
     add,
-    fetch
+    fetch,
+    get
 };

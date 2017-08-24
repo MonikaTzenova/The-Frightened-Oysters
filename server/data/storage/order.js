@@ -68,53 +68,83 @@ const create = function(order) {
 
 const fetchByUsername = function(username) {
     let promise = new Promise((resolve, reject) => {
-        fs.readFile(ordersFilePath, (err, data) => {
-            if (err) {
-                reject(err);
-                return;
-            }
+        fetch()
+            .then(orders => {
+                let userOrders = [];
+                for (var i = 0; i < orders.length; i += 1) {
+                    let currentOrder = orders[i];
 
-            let orders = helper.decrypt(data);
-
-            let userOrders = [];
-            for (var i = 0; i < orders.length; i += 1) {
-                let userOrderPriceSum = 0;
-                let currentOrder = orders[i];
-                let currentOrderUsernameProducts = [];
-
-                for (var j = 0; j < currentOrder.products.length; j += 1) {
-                    let currentProduct = currentOrder.products[j];
-                    if (currentProduct.ownerUsername === username) {
-                        delete currentProduct.id;
-                        currentOrderUsernameProducts.push(currentProduct);
-                        userOrderPriceSum += currentProduct.price;
+                    const productsObj = getOrderProductsObjectByUsername(currentOrder, username);
+                    if (productsObj.products.length > 0) {
+                        let userOrder = parseUserOrder(currentOrder, productsObj);
+                        userOrders.push(userOrder);
                     }
                 }
 
-                if (currentOrderUsernameProducts.length > 0) {
-                    let userOrder = {
-                        id: currentOrder.id,
-                        price: userOrderPriceSum,
-                        address: currentOrder.address,
-                        email: currentOrder.email,
-                        name: currentOrder.name,
-                        payment: currentOrder.payment,
-                        phone: currentOrder.phone,
-                        products: currentOrderUsernameProducts
-                    };
-                    userOrders.push(userOrder);
-                }
-            }
-
-            userOrders = userOrders.sort((a, b) => a.id < b.id);
-            resolve(userOrders);
-        });
+                resolve(userOrders);
+            });
     });
 
     return promise;
 };
 
+const getById = function(id, username) {
+    let promise = new Promise((resolve, reject) => {
+        fetch()
+            .then(orders => {
+                let order = orders.find(o => o.id === id);
+                let userOrder;
+
+                const productsObj = getOrderProductsObjectByUsername(order, username);
+                if (productsObj.products.length > 0) {
+                    userOrder = parseUserOrder(order, productsObj);
+                }
+
+                resolve(userOrder);
+            })
+            .catch(err => {
+                reject(err);
+            });
+    });
+
+    return promise;
+};
+
+const getOrderProductsObjectByUsername = (order, username) => {
+    // Check if order has at least one product that belongs to the user
+    let products = [];
+    let orderPrice = 0;
+
+    for (let i = 0; i < order.products.length; i += 1) {
+        let currentProduct = order.products[i];
+        if (currentProduct.ownerUsername === username) {
+            delete currentProduct.id;
+            products.push(currentProduct);
+            orderPrice += currentProduct.price;
+        }
+    }
+
+    return {
+        products,
+        orderPrice
+    };
+};
+
+const parseUserOrder = (order, productObj) => {
+    return {
+        id: order.id,
+        price: productObj.orderPrice,
+        address: order.address,
+        email: order.email,
+        name: order.name,
+        payment: order.payment,
+        phone: order.phone,
+        products: productObj.products
+    };
+};
+
 module.exports = {
     create,
-    fetchByUsername
+    fetchByUsername,
+    getById
 };
