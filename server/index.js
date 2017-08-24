@@ -2,6 +2,7 @@
 
 const Hapi = require('hapi');
 const routes = require('./routes');
+const data = require('./data');
 
 // Create a server with a host and port
 const server = new Hapi.Server();
@@ -14,6 +15,8 @@ server.connection({
 routes.forEach(route => {
     server.route(route);
 });
+
+data.start();
 
 // Start the server
 server.start((err) => {
