@@ -12,6 +12,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProductsComponent } from './products/products.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProductsComponent } from './products/products.component';
   imports: [
     BrowserModule,
     CommonModule,
+    AppRoutingModule,
 	HttpModule,
 	routing,
   ],
