@@ -45,9 +45,17 @@
 	 - same as POST
  - **[DELETE] /api/products/:id**
 	 - cookie: *authenticated*
- - **[GET] /api/orderHistory**
+ - **[POST] /api/orders**
+	 - params:
+		 - productIds: *int[]*
+		 - name: *string*
+		 - phone: *string*
+		 - address: *string*
+		 - email: *string*
+		 - payment: *string*
+ - **[GET] /api/orders**
 	 - cookie: *authenticated*
 		 - queries:
 			 - page: *int*
- - **[GET] /api/orderHistory/:id**
+ - **[GET] /api/orders/:id**
 	 - cookie: *authenticated*
