@@ -8,7 +8,12 @@ const fetch = function(username) {
     return oderStorage.fetchByUsername(username);
 };
 
+const getById = function(id, username) {
+    return oderStorage.getById(id, username);
+};
+
 module.exports = {
     create,
-    fetch
+    fetch,
+    getById
 };
