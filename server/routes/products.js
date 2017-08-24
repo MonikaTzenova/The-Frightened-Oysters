@@ -7,20 +7,41 @@ const fetch = {
     method: 'GET',
     path: '/api/products',
     handler: function(request, reply) {
+        let productsInfo;
         return productData.fetch()
             .then(products => {
-                let lengthToLoop = defaultPageSize > products.length ? products.length : defaultPageSize;
+                productsInfo = products;
+
+                // Filter by username
+                let showLoggedUserProductOnly = request.query.myProducts;
+                if (showLoggedUserProductOnly) {
+                    const cookie = helper.getCookie(request.headers);
+                    return authenticationData.getUsernameByCookie(cookie);
+                }
+
+                return Promise.resolve();
+            })
+            .then(loggedUsername => {
+                // Filter by username
+                if (loggedUsername) {
+                    productsInfo = productsInfo.filter(p => p.ownerUsername === loggedUsername);
+                }
+
+                let productsToReturn = [];
+
+                // Paging
+                let lengthToLoop = defaultPageSize > productsInfo.length ? productsInfo.length : defaultPageSize;
                 let startIndex = 0;
                 let queryPage = parseInt(request.query.page);
                 if (queryPage) {
                     startIndex = queryPage - 1;
                 }
-                let productsToReturn = [];
                 for (var i = startIndex * lengthToLoop; i < (startIndex + 1) * lengthToLoop; i += 1) {
-                    if (products[i]) {
-                        productsToReturn.push(products[i]);
+                    if (productsInfo[i]) {
+                        productsToReturn.push(productsInfo[i]);
                     }
                 }
+
                 return reply(productsToReturn);
             })
             .catch(error => {

@@ -48,6 +48,22 @@ const login = function(params) {
     return promise;
 };
 
+const getUsernameByCookie = function(cookie) {
+    let promise = new Promise((resolve, reject) => {
+        return sessionStorage.fetch()
+            .then(sessions => {
+                var currentSession = sessions.find(session => session.session === cookie);
+                if (currentSession) {
+                    resolve(currentSession.username);
+                    return;
+                }
+                resolve();
+            });
+    });
+
+    return promise;
+};
+
 const validateSession = function(cookie) {
     const promise = new Promise((resolve, reject) => {
         return sessionStorage.fetch()
@@ -71,5 +87,6 @@ const validateSession = function(cookie) {
 module.exports = {
     register,
     login,
-    validateSession
+    validateSession,
+    getUsernameByCookie
 };
