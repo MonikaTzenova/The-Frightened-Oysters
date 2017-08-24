@@ -9,7 +9,6 @@ const fetch = {
     handler: function(request, reply) {
         return productData.fetch()
             .then(products => {
-                // TODO: implement query page logic
                 let lengthToLoop = defaultPageSize > products.length ? products.length : defaultPageSize;
                 let startIndex = 0;
                 let queryPage = parseInt(request.query.page);

@@ -20,7 +20,8 @@ const routes = [
     product.delete,
 
     // Orders
-    order.add
+    order.add,
+    order.fetch
 ];
 
 module.exports = routes;

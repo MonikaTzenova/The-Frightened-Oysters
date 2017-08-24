@@ -29,9 +29,11 @@ const fetch = function() {
 };
 
 const create = function(order) {
+    let ordersCache;
     let promise = new Promise((resolve, reject) => {
         fetch()
             .then(orders => {
+                ordersCache = orders;
                 let newOrderId = 1;
                 const lastAddedOrder = orders[0];
                 if (lastAddedOrder) {
@@ -46,7 +48,8 @@ const create = function(order) {
 
                 delete order.productIds;
                 order.products = orderProducts;
-                const dataToWrite = helper.encrypt(order);
+                ordersCache.push(order);
+                const dataToWrite = helper.encrypt(ordersCache);
 
                 fs.writeFileSync(ordersFilePath, dataToWrite);
                 let productIdsToBeDeleted = orderProducts.map(p => p.id);
@@ -63,6 +66,55 @@ const create = function(order) {
     return promise;
 };
 
+const fetchByUsername = function(username) {
+    let promise = new Promise((resolve, reject) => {
+        fs.readFile(ordersFilePath, (err, data) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+
+            let orders = helper.decrypt(data);
+
+            let userOrders = [];
+            for (var i = 0; i < orders.length; i += 1) {
+                let userOrderPriceSum = 0;
+                let currentOrder = orders[i];
+                let currentOrderUsernameProducts = [];
+
+                for (var j = 0; j < currentOrder.products.length; j += 1) {
+                    let currentProduct = currentOrder.products[j];
+                    if (currentProduct.ownerUsername === username) {
+                        delete currentProduct.id;
+                        currentOrderUsernameProducts.push(currentProduct);
+                        userOrderPriceSum += currentProduct.price;
+                    }
+                }
+
+                if (currentOrderUsernameProducts.length > 0) {
+                    let userOrder = {
+                        id: currentOrder.id,
+                        price: userOrderPriceSum,
+                        address: currentOrder.address,
+                        email: currentOrder.email,
+                        name: currentOrder.name,
+                        payment: currentOrder.payment,
+                        phone: currentOrder.phone,
+                        products: currentOrderUsernameProducts
+                    };
+                    userOrders.push(userOrder);
+                }
+            }
+
+            userOrders = userOrders.sort((a, b) => a.id < b.id);
+            resolve(userOrders);
+        });
+    });
+
+    return promise;
+};
+
 module.exports = {
-    create
+    create,
+    fetchByUsername
 };
