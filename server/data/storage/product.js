@@ -153,10 +153,35 @@ const deleteProduct = function(id, loggedUsername) {
     return promise;
 };
 
+const deleteProductsByIds = function(ids) {
+    let promise = new Promise((resolve, reject) => {
+        fetch()
+            .then(products => {
+                products = products.filter(product => ids.indexOf(product.id) < 0);
+
+                const dataToWrite = helper.encrypt(products);
+                fs.writeFile(productsFilePath, dataToWrite, (err) => {
+                    if (err) {
+                        reject(err);
+                        return;
+                    }
+
+                    resolve({success: true});
+                });
+            })
+            .catch(err => {
+                reject(err);
+            });
+    });
+
+    return promise;
+};
+
 module.exports = {
     fetch,
     create,
     getById,
     edit,
-    delete: deleteProduct
+    delete: deleteProduct,
+    deleteProductsByIds
 };

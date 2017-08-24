@@ -1,6 +1,7 @@
 const { login, register } = require('./authentication');
 const profile = require('./profile');
 const product = require('./products');
+const order = require('./order');
 
 const routes = [
     // Authentication routes
@@ -16,7 +17,11 @@ const routes = [
     product.add,
     product.get,
     product.edit,
-    product.delete
+    product.delete,
+
+    // Orders
+    order.add,
+    order.fetch
 ];
 
 module.exports = routes;
