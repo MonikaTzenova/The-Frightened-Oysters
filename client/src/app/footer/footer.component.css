@@ -89,3 +89,15 @@ h6,
 		position: relative;
 	}
 }
+
+div.col-md-3.col-sm-6 ul {
+  margin: 0;
+}
+
+div.col-md-3.col-sm-6 hr {
+  margin: 1rem 0;
+}
+
+div.container.animated.fadeInUp {
+  padding: 0.9rem !important;
+}

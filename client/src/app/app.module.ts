@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {routing} from './app.routing';
 import { HttpModule } from '@angular/http';
+
+import { AppRouting } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -12,7 +13,11 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProductsComponent } from './products/products.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AddEditProductComponent } from './add-edit-product/add-edit-product.component';
+import { HistoryComponent } from './history/history.component';
+import { CheckOutComponent } from './check-out/check-out.component';
+import { AboutComponent } from './about/about.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +28,18 @@ import { AppRoutingModule } from './app-routing.module';
     SignUpComponent,
     HomeComponent,
     ProfileComponent,
-    ProductsComponent
+    ProductsComponent,
+    AddEditProductComponent,
+    HistoryComponent,
+    CheckOutComponent,
+    AboutComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule,
-	HttpModule,
-	routing,
+    AppRouting,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
