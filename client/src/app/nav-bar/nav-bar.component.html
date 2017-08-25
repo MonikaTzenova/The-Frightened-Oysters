@@ -1,19 +1,31 @@
-<div class="topnav" id="myTopnav">
-    <a href="home">Home</a>
-    <a href="products">Products</a>
-    <a href="add-edit-product">Add/Edit product</a>
-    <a href="profile ">Profile</a>
-    <a href="history">Order history</a>
-    <a href="check-out">Check out</a>
-    <a href="about">About</a>
-    <a href="cart" class="nav navbar-nav navbar-right cart">
-        <img src="http://www.inmotionhosting.com/support/images/stories/icons/ecommerce/empty-cart-light.png">
-    </a>
-    <a href="login" class="nav navbar-nav navbar-right">
-        <span class="glyphicon glyphicon-log-in"></span> Login
-    </a>
-    <a href="sign-up" class="nav navbar-nav navbar-right">
-        <span class="glyphicon glyphicon-user"></span> Sign up
-    </a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="home">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="products">Products</a></li>
+                <li><a href="add-edit-product">Add/Edit product</a></li> 
+                <li><a href="profile">Profile</a></li> 
+                <li><a href="history">Order history</a></li>
+                <li><a href="check-out">Check out</a></li>
+                <li><a href="about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li>
+                    <a href="cart" class="cart">
+                        <img src="http://www.inmotionhosting.com/support/images/stories/icons/ecommerce/empty-cart-light.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
