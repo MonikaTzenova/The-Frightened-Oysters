@@ -7,6 +7,7 @@
   bottom: 0;
   left: 0;
   padding: 2rem;
+  position: absolute;
 }
 #footer ul {
   padding-left: 0;
@@ -84,7 +85,7 @@ h6,
 
 
 @media screen and (max-width: 600px) {
-	#footer { 
+	#footer {
 		position: relative;
 	}
 }
