@@ -1,0 +1,21 @@
+#centralPanel {
+    size: 10rem;
+}
+
+img {
+    width: 20rem;
+}
+
+img:hover {
+    background-color: #aaa2a2;
+}
+
+div {
+    width: 100%;
+}
+
+hr {
+    /* max-width: 1366px;
+    width: 100%; */
+    border: 1px solid grey;
+}
