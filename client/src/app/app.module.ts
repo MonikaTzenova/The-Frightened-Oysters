@@ -5,6 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppRouting } from './app.routing';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { firebaseConfig } from './../environments/firebase.config';
+
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -40,6 +45,9 @@ import { CartComponent } from './cart/cart.component';
     CommonModule,
     AppRouting,
     HttpModule,
+	  AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
