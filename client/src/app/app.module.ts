@@ -23,6 +23,8 @@ import { HistoryComponent } from './history/history.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
+import { CoreModule } from './core/core.module';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -38,16 +40,18 @@ import { CartComponent } from './cart/cart.component';
     HistoryComponent,
     CheckOutComponent,
     AboutComponent,
-    CartComponent
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRouting,
     HttpModule,
-	  AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    CoreModule.forRoot(),
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

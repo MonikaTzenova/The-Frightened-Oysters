@@ -1,0 +1,17 @@
+.item.active>img {
+    display: block;
+    margin: auto;
+    margin-bottom: 13.6rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+ol.carousel-indicators {
+    top: 23rem;
+}
+
+ol.carousel-indicators>li {
+    border: 0.2rem solid #8D8D8D;
+}
