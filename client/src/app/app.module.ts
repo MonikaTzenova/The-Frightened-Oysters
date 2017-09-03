@@ -23,8 +23,10 @@ import { HistoryComponent } from './history/history.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
-import { CoreModule } from './core/core.module';
+import { CoreModule } from './core-module/core.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { DetailsComponent } from './products/details/details.component';
+// import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     CheckOutComponent,
     AboutComponent,
     CartComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     AngularFireDatabaseModule,
     CoreModule.forRoot(),
     CarouselModule,
+    // ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

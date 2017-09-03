@@ -1,8 +1,10 @@
 <carousel>
-    <slide *ngFor="let item of items">
-        <p></p>
+    <h1 class="text-center">Promotions</h1>
+    <slide *ngFor="let item of promotions">
         <img src="{{item.image}}">
-        <h3>{{item.name}}</h3>
-        <p></p>
+        <div class="carousel-caption">
+            <h3>{{item.name}} </h3>
+            <a href="products/{{item.id}}" class="btn btn-link btn-lg" role="button">Details</a>
+        </div>
     </slide>
 </carousel>

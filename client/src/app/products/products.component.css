@@ -1,0 +1,25 @@
+h1,
+h2 {
+    margin: 1rem;
+}
+
+div {
+    width: 16rem;
+    height: 38rem;
+    margin: 1rem 0 0 1rem;
+    display: inline-table;
+}
+
+img {
+    height: 16rem;
+    display: block;
+    margin: auto;
+}
+
+h3 {
+    height: 9.5rem;
+}
+
+button {
+    align-self: bottom;
+}

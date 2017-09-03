@@ -1,3 +1,17 @@
-<p>
-  products works!
-</p>
+<h1>Info thanks to <a href="http://www.gsmarena.com/" target="blank">GSM arena</a></h1>
+<h2>Our promotions</h2>
+<div *ngFor="let item of promotions">
+    <img src="{{item.image}}" class="centered">
+    <h3 class="text-center">{{item.name}}</h3>
+    <a href="products/{{item.id}}" class="btn btn-primary btn-lg btn-block" role="button">Details</a>
+    <button class="btn btn-success btn-lg btn-block">Add to cart</button>
+</div>
+<p></p>
+<h2>Our products</h2>
+<div *ngFor="let item of products">
+    <img src="{{item.image}}" class="centered">
+    <h3 class="text-center">{{item.name}}</h3>
+    <a href="products/{{item.id}}" class="btn btn-primary btn-lg btn-block" role="button">Details</a>
+    <button class="btn btn-success btn-lg btn-block">Add to cart</button>
+</div>
+<p></p>

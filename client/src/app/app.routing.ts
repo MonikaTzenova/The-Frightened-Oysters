@@ -16,6 +16,7 @@ const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full', },
     { path: 'home', component: HomeComponent },
     { path: 'products', component: ProductsComponent },
+    // { path: 'products', loadChildren: './products/products.module#ProductsModule' },
     { path: 'add-edit-product', component: AddEditProductComponent },
     { path: 'profile', component: ProfileComponent },
     { path: 'history', component: HistoryComponent },
