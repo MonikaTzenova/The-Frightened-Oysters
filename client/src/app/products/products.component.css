@@ -23,3 +23,9 @@ h3 {
 button {
     align-self: bottom;
 }
+
+hr {
+    border-width: 0.2rem;
+    border-color: #101010;
+    margin: 0;
+}
