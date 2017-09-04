@@ -33,3 +33,8 @@ hr {
     width: 100%;
     height: 50px;
 }
+.search>input {
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
