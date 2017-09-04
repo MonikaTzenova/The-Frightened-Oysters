@@ -28,6 +28,7 @@ import { CartComponent } from './cart/cart.component';
 import { CoreModule } from './core-module/core.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { DetailsComponent } from './products/details/details.component';
+import {SearchFilterPipe} from './pipes/search-filter.pipe';
 // import { ProductsModule } from './products/products.module';
 
 @NgModule({
@@ -46,6 +47,7 @@ import { DetailsComponent } from './products/details/details.component';
     AboutComponent,
     CartComponent,
     DetailsComponent,
+	  SearchFilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -57,8 +59,8 @@ import { DetailsComponent } from './products/details/details.component';
     AngularFireDatabaseModule,
     CoreModule.forRoot(),
     CarouselModule,
-	ToastModule.forRoot(),
-	BrowserAnimationsModule,
+	  ToastModule.forRoot(),
+	  BrowserAnimationsModule,
     // ProductsModule
   ],
   providers: [],
