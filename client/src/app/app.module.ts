@@ -9,6 +9,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from './../environments/firebase.config';
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -55,6 +57,8 @@ import { DetailsComponent } from './products/details/details.component';
     AngularFireDatabaseModule,
     CoreModule.forRoot(),
     CarouselModule,
+	ToastModule.forRoot(),
+	BrowserAnimationsModule,
     // ProductsModule
   ],
   providers: [],
