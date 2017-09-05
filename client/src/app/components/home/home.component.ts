@@ -1,4 +1,4 @@
-import { PromotionsService } from '../../core-module/promotions.service';
+import { PromotionsService } from '../../services/promotions.service';
 import { Component, OnInit, NgModule, ViewContainerRef } from '@angular/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';

@@ -1,7 +1,7 @@
-import { ProductsService } from './products.service';
+import { ProductsService } from '../../services/products.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PromotionsService } from './promotions.service';
+import { PromotionsService } from '../../services/promotions.service';
 
 @NgModule({})
 export class CoreModule {

@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { ProductsService } from '../../core-module/products.service';
+import { ProductsService } from '../../services//products.service';
 
 @Component({
   selector: 'app-details',
