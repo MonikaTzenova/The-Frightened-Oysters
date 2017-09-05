@@ -12,16 +12,16 @@ import 'rxjs/Rx';
 export class ProductsComponent implements OnInit {
     @ViewChild('input')
     input: ElementRef;
-	products;
-	promotions;
-	
-	constructor(private productsService: ProductsService,
-		private promotionsService: PromotionsService) { }
+  products;
+  promotions;
+
+  constructor(private productsService: ProductsService,
+  private promotionsService: PromotionsService) { }
 
   ngOnInit() {
     this.products = this.productsService.getAll();
     this.promotions = this.promotionsService.getAll();
-	let eventObservable = Observable.fromEvent(this.input.nativeElement, 'keyup')
+    const eventObservable = Observable.fromEvent(this.input.nativeElement, 'keyup');
     eventObservable.subscribe();
   }
 }
