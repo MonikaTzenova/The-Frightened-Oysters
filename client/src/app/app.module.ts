@@ -47,7 +47,7 @@ import {SearchFilterPipe} from './pipes/search-filter.pipe';
     AboutComponent,
     CartComponent,
     DetailsComponent,
-	  SearchFilterPipe,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -59,8 +59,8 @@ import {SearchFilterPipe} from './pipes/search-filter.pipe';
     AngularFireDatabaseModule,
     CoreModule.forRoot(),
     CarouselModule,
-	  ToastModule.forRoot(),
-	  BrowserAnimationsModule,
+    ToastModule.forRoot(),
+    BrowserAnimationsModule,
     // ProductsModule
   ],
   providers: [],
