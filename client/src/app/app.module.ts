@@ -28,6 +28,7 @@ import { CoreModule } from './modules/core-module/core.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { DetailsComponent } from './components/products/details/details.component';
 import {SearchFilterPipe} from './pipes/search-filter.pipe';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 // import { ProductsModule } from './products/products.module';
 
 @NgModule({
@@ -58,7 +59,8 @@ import {SearchFilterPipe} from './pipes/search-filter.pipe';
     AboutComponent,
     CartComponent,
     DetailsComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    NotFoundComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

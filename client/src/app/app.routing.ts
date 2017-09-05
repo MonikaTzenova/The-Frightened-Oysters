@@ -11,9 +11,11 @@ import { HistoryComponent } from './components/history/history.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
 import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full', },
+
     { path: 'home', component: HomeComponent },
     { path: 'products', component: ProductsComponent },
     // { path: 'products', loadChildren: './products/products.module#ProductsModule' },
@@ -26,8 +28,7 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'sign-up', component: SignUpComponent },
 
-    // otherwise redirect to home
-    { path: '**', redirectTo: 'home' }
+    { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
