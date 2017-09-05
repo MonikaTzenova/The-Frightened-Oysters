@@ -24,7 +24,7 @@ import { HistoryComponent } from './components/history/history.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
 import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
-import { CoreModule } from './core-module/core.module';
+import { CoreModule } from './modules/core-module/core.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { DetailsComponent } from './products/details/details.component';
 import {SearchFilterPipe} from './pipes/search-filter.pipe';
