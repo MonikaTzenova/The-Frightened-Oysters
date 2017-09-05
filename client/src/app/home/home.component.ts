@@ -16,14 +16,14 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 export class HomeComponent implements OnInit {
   promotions;
   constructor(private promotionsService: PromotionsService, public toastr: ToastsManager, vcRef: ViewContainerRef) {
-	 this.toastr.setRootViewContainerRef(vcRef);
+    this.toastr.setRootViewContainerRef(vcRef);
   }
 
   ngOnInit() {
     this.promotions = this.promotionsService.getAll();
   }
-  
-// Simple toastr  
+
+// Simple toastr
 //    showSuccess() {
 //        this.toastr.success('You are awesome!', 'Success!');
 //    }
