@@ -18,7 +18,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from './components/products/list/products.component';
 import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
 import { HistoryComponent } from './components/history/history.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
@@ -26,7 +26,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CoreModule } from './modules/core-module/core.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { DetailsComponent } from './products/details/details.component';
+import { DetailsComponent } from './components/products/details/details.component';
 import {SearchFilterPipe} from './pipes/search-filter.pipe';
 // import { ProductsModule } from './products/products.module';
 

@@ -4,7 +4,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from './components/products/list/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
 import { HistoryComponent } from './components/history/history.component';
