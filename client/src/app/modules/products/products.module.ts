@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DetailsComponent } from '../../components/products/details/details.component';
 import { ProductsRouting } from './products.routing';
 import { ProductsComponent } from '../../components/products/list/products.component';
+import {SearchFilterPipe} from '../../pipes/search-filter.pipe';
 import { ProductsService } from '../../services/products.service';
 
 
@@ -14,7 +15,8 @@ import { ProductsService } from '../../services/products.service';
   ],
   declarations: [
     ProductsComponent,
-    DetailsComponent
+    DetailsComponent,
+    SearchFilterPipe
   ],
   // providers: [ProductsService] // comment later
 })
