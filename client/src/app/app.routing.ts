@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { LoginComponent } from './login/login.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './products/products.component';
-import { ProfileComponent } from './profile/profile.component';
-import { AddEditProductComponent } from './add-edit-product/add-edit-product.component';
-import { HistoryComponent } from './history/history.component';
-import { CheckOutComponent } from './check-out/check-out.component';
-import { AboutComponent } from './about/about.component';
-import { CartComponent } from './cart/cart.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
+import { HistoryComponent } from './components/history/history.component';
+import { CheckOutComponent } from './components/check-out/check-out.component';
+import { AboutComponent } from './components/about/about.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full', },
