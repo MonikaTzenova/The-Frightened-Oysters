@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ProductsService } from '../services/products.service';
-import { PromotionsService } from '../services/promotions.service';
+import { ProductsService } from '../../../services/products.service';
+import { PromotionsService } from '../../../services/promotions.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
