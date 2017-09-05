@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 
 import { AppRouting } from './app.routing';
+
+import { SharedModule } from './modules/shared/shared.module';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -13,8 +14,6 @@ import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
@@ -32,10 +31,22 @@ import {SearchFilterPipe} from './pipes/search-filter.pipe';
 // import { ProductsModule } from './products/products.module';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    SharedModule,
+    AppRouting,
+    HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    CoreModule.forRoot(),
+    CarouselModule,
+    ToastModule.forRoot(),
+    BrowserAnimationsModule,
+    // ProductsModule
+  ],
   declarations: [
     AppComponent,
-    NavBarComponent,
-    FooterComponent,
     LoginComponent,
     SignUpComponent,
     HomeComponent,
@@ -48,20 +59,6 @@ import {SearchFilterPipe} from './pipes/search-filter.pipe';
     CartComponent,
     DetailsComponent,
     SearchFilterPipe
-  ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    AppRouting,
-    HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule,
-    AngularFireDatabaseModule,
-    CoreModule.forRoot(),
-    CarouselModule,
-    ToastModule.forRoot(),
-    BrowserAnimationsModule,
-    // ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
