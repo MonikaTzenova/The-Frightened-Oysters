@@ -29,7 +29,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { DetailsComponent } from './components/products/details/details.component';
 import {SearchFilterPipe} from './pipes/search-filter.pipe';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-// import { ProductsModule } from './products/products.module';
+import { ProductsModule } from './modules/products/products.module';
 
 @NgModule({
   imports: [
@@ -52,13 +52,13 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     SignUpComponent,
     HomeComponent,
     ProfileComponent,
-    ProductsComponent,
+    // ProductsComponent,
     AddEditProductComponent,
     HistoryComponent,
     CheckOutComponent,
     AboutComponent,
     CartComponent,
-    DetailsComponent,
+    // DetailsComponent,
     SearchFilterPipe,
     NotFoundComponent
   ],
