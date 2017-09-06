@@ -3,12 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProductsComponent } from '../../components/products/list/products.component';
 import { DetailsComponent } from '../../components/products/details/details.component';
+import {ProductsService} from "../../services/products.service";
 
 const appRoutes: Routes = [
     { path: '', component: ProductsComponent },
-    { path: 'a', component: DetailsComponent },
+    { path: ':id', component: DetailsComponent},
 
-    // // otherwise redirect to home
+// // otherwise redirect to home
     // { path: '**', redirectTo: 'products' }
 ];
 

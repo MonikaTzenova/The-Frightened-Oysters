@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Internal Modules
 import { SharedModule } from './modules/shared/shared.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
+import { ModalModule } from 'ngx-bootstrap';
 // import { ProductsModule } from './products/products.module';
 
 // Components
@@ -50,6 +51,7 @@ import { ProductsModule } from './modules/products/products.module';
 
     SharedModule,
     CoreModule.forRoot(),
+    ModalModule.forRoot(),
 
     AuthenticationModule
     // ProductsModule
