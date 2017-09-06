@@ -1,17 +1,22 @@
-<p>WORKS</p>
-
-<!-- <div *ngFor="let item of items">
-    <img src="{{item.image}}" class="centered">
-    <h3 class="text-center">{{item.name}}</h3>
-    <p class="text-left">{{item.size}}</p>
-    <p class="text-left">{{item.os}}</p>
-    <p class="text-left">{{item.storage}}</p>
-    <p class="text-left">{{item.displaySize}}</p>
-    <p class="text-left">{{item.cameraSize}}</p>
-    <p class="text-left">{{item.RAM}}</p>
-    <p class="text-left">{{item.chipset}}</p>
-    <p class="text-left">{{item.batteryMaH}}</p>
-    <p class="text-left">{{item.price}}</p>
-    <a href="products/{{item.id}}" class="btn btn-primary btn-lg btn-block" role="button">Details</a>
-    <button class="btn btn-success btn-lg btn-block">Add to cart</button>
-</div> -->
+<div class="container">
+<div class="col-md-12">
+  <div class="thumbnail">
+    <img src="{{details.image}}" class="img-responsive">
+  </div>
+    <div class="caption">
+      <h3 class="text-center">{{details.name}}</h3>
+      <h4 class="text-center">Price: {{details.price}}</h4>
+      <h4 class="text-center">Size: {{details.size}}</h4>
+      <h4 class="text-center">OS: {{details.os}}</h4>
+      <h4 class="text-center">Storage: {{details.storage}}</h4>
+      <h4 class="text-center">Display Size: {{details.displaySize}}</h4>
+      <h4 class="text-center">Camera: {{details.cameraSize}}</h4>
+      <h4 class="text-center">RAM : {{details.RAM}}</h4>
+      <h4 class="text-center">Chipset: {{details.chipset}}</h4>
+      <h4 class="text-center">BatteryMaH: {{details.batteryMaH}}</h4>
+    </div>
+    <div class="btn-ground text-center col-md-12">
+      <button class="btn btn-success btn-lg ">Add to cart</button>
+      <a href="products/{{details.id - 1}}" class="btn btn-primary btn-lg " role="button">Next</a>
+    </div>
+</div>

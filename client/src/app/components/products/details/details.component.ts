@@ -1,5 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { ProductsService } from '../../../services//products.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -8,9 +9,13 @@ import { ProductsService } from '../../../services//products.service';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor( @Inject(ProductsService) private productsService) { }
+  constructor( @Inject(ProductsService) private productsService,  private activatedRoute: ActivatedRoute) {
+
+  }
   details;
   ngOnInit() {
-    this.details = this.productsService.getAll();
+    const id = +this.activatedRoute.snapshot.params['id'];
+    this.details = this.productsService.getById(id);
   }
+
 }

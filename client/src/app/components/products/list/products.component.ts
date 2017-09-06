@@ -12,8 +12,8 @@ import 'rxjs/Rx';
 export class ProductsComponent implements OnInit {
     @ViewChild('input')
     input: ElementRef;
-  products;
-  promotions;
+    products;
+    promotions;
 
   constructor(private productsService: ProductsService,
   private promotionsService: PromotionsService) { }
