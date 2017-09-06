@@ -13,7 +13,6 @@ export class AuthenticationService {
 
   public isUserLogged(): boolean {
     const authCookie = this.cookieService.get(authCookieKey);
-    console.log(this.cookieService.getAll());
     return !!authCookie;
   }
 

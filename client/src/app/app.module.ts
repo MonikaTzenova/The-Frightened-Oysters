@@ -19,6 +19,9 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
 import { ModalModule } from 'ngx-bootstrap';
 // import { ProductsModule } from './products/products.module';
 
+// Pipes
+import { PhonePipe } from './pipes/phone-pipe';
+
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -66,6 +69,7 @@ import { ProductsModule } from './modules/products/products.module';
     CheckOutComponent,
     AboutComponent,
     CartComponent,
+    PhonePipe,
     // DetailsComponent,
     NotFoundComponent
   ],
