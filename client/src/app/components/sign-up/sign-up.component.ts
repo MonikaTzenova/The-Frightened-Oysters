@@ -84,12 +84,9 @@ export class SignUpComponent implements OnInit {
     const handleSuccessResponse = (cookie: ICookie) => {
       this.router.navigate(['home'], { queryParams: { 'refresh': 1 } });
     };
-    const handleError = (error) => {
-      console.log(error);
-    };
 
     this.userService.register(userData)
-      .subscribe(handleSuccessResponse, handleError);
+      .subscribe(handleSuccessResponse);
   }
 
 }

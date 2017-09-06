@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
 
   checkForForceRefresh() {
     const forceRefresh = this.activatedRoute.snapshot.queryParams['refresh'];
-    console.log(forceRefresh);
     if (forceRefresh) {
       location.reload();
       this.router.navigate(['home']);
