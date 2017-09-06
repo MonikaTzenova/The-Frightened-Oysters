@@ -48,9 +48,7 @@ export class SignUpComponent implements OnInit {
     ]);
 
     this.phone  = new FormControl('', [
-      Validators.required,
-      Validators.min(3),
-      Validators.max(20)
+      Validators.required
     ]);
 
     this.address  = new FormControl('', [

@@ -35,8 +35,18 @@ export class UsersService {
   }
 
   public logout() {
-    // TODO: send request to the server to remove session
-    this.authenticationService.deleteLoginCookie();
+    const headers = this.authenticationService.getAuthHeader();
+    return this.http
+      .get(`${remoteServerAuthHost}/logout`, { headers })
+      .map(res => {
+        const parsedResponse = res.json();
+        if (parsedResponse && parsedResponse.success) {
+          this.authenticationService.deleteLoginCookie();
+          return true;
+        } else {
+          throw new Error('Invalid logout');
+        }
+      });
   }
 
   public register(user: IUser): Observable<ICookie> {

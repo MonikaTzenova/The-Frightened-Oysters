@@ -8,12 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./logout.component.css']
 })
 export class LogoutComponent implements OnInit {
+  errorMessage: string;
 
   constructor(private router: Router, private userService: UsersService) { }
 
   ngOnInit() {
-    this.userService.logout();
-    this.router.navigate(['home'], { queryParams: { 'refresh': 1 } });
+    const handleSuccessResponse = () => {
+      this.router.navigate(['home'], { queryParams: { 'refresh': 1 } });
+    };
+    const handleError = (errorMessage: string) => {
+      this.errorMessage = errorMessage;
+    };
+
+    this.userService.logout()
+      .subscribe(handleSuccessResponse, handleError);
   }
 
 }
