@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable() export class PromotionsService {
+export class PromotionsService {
   constructor() { }
 
   promotions = [{

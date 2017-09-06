@@ -30,8 +30,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { CoreModule } from './modules/core-module/core.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { DetailsComponent } from './components/products/details/details.component';
-import {SearchFilterPipe} from './pipes/search-filter.pipe';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProductsModule } from './modules/products/products.module';
 
 @NgModule({
   imports: [
@@ -55,14 +55,13 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    ProductsComponent,
+    // ProductsComponent,
     AddEditProductComponent,
     HistoryComponent,
     CheckOutComponent,
     AboutComponent,
     CartComponent,
-    DetailsComponent,
-    SearchFilterPipe,
+    // DetailsComponent,
     NotFoundComponent
   ],
   providers: [],
