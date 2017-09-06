@@ -19,7 +19,9 @@ routes.forEach(route => {
             config: {
                 cors: {
                     origin: ['*'],
-                    additionalHeaders: ['cache-control', 'x-requested-with']
+                    // headers: ["Accept", "Authorization", "Content-Type", "If-None-Match", "Accept-language"],
+                    // headers: ["Access-Control-Allow-Origin","Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type"],
+                    additionalHeaders: ['cache-control', 'x-cookie', "Access-Control-Allow-Origin", "Access-Control-Request-Headers", "Access-Control-Request-Method"]
                 }
             }
         }

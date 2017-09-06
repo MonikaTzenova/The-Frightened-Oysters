@@ -4,6 +4,7 @@ import { PromotionsService } from '../../services/promotions.service';
 import { UsersService } from './../../services/users.service';
 import { CookieService } from 'ng2-cookies';
 import { AuthenticationService } from './../../services/authentication.service';
+import { ProfileResolverService } from './../../services/profile-resolver.service';
 
 @NgModule({})
 export class CoreModule {
@@ -15,7 +16,8 @@ export class CoreModule {
         AuthenticationService,
         PromotionsService,
         ProductsService,
-        UsersService
+        UsersService,
+        ProfileResolverService
       ],
     };
   }
