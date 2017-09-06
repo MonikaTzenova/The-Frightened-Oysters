@@ -1,3 +1,4 @@
+import { ProfileResolverService } from './services/profile-resolver.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
@@ -22,10 +23,12 @@ const appRoutes: Routes = [
     { path: 'auth', loadChildren: './modules/authentication/authentication.module#AuthenticationModule' },
 
     { path: 'home', component: HomeComponent },
+    { path: 'profile', component: ProfileComponent, resolve: {
+        'user': ProfileResolverService
+    } },
     // { path: 'products', component: ProductsComponent },
     { path: 'products', loadChildren: './modules/products/products.module#ProductsModule' },
     { path: 'add-edit-product', component: AddEditProductComponent },
-    { path: 'profile', component: ProfileComponent },
     { path: 'history', component: HistoryComponent },
     { path: 'check-out', component: CheckOutComponent },
     { path: 'about', component: AboutComponent },

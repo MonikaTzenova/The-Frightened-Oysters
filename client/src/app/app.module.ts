@@ -11,6 +11,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Internal Modules
 import { SharedModule } from './modules/shared/shared.module';
@@ -44,6 +45,8 @@ import { ProductsModule } from './modules/products/products.module';
     CarouselModule,
     ToastModule.forRoot(),
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
 
     SharedModule,
     CoreModule.forRoot(),
