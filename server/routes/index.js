@@ -1,4 +1,4 @@
-const { login, register } = require('./authentication');
+const { login, register, logout } = require('./authentication');
 const profile = require('./profile');
 const product = require('./products');
 const order = require('./order');
@@ -7,6 +7,7 @@ const routes = [
     // Authentication routes
     login,
     register,
+    logout,
 
     // Profile routes
     profile.get,
