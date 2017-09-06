@@ -25,7 +25,7 @@ const register = {
     handler: function(request, reply) {
         return authenticationData.register(request.payload)
             .then(response => {
-                return reply(response);
+                return reply(response).state('x-cookie', response.cookie);
             })
             .catch(error => {
                 return reply({

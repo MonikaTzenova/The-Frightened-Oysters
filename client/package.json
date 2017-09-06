@@ -30,6 +30,7 @@
     "heimdalljs": "^0.2.5",
     "heimdalljs-logger": "^0.1.9",
     "jquery": "^3.2.1",
+    "ng2-cookies": "^1.0.12",
     "ng2-toastr": "^4.1.2",
     "ngx-bootstrap": "^1.9.1",
     "rxjs": "^5.4.2",

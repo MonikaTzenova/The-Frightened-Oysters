@@ -13,6 +13,17 @@ server.connection({
 
 // Register routes
 routes.forEach(route => {
+    let routeWithCors = Object.assign(
+        route,
+        {   
+            config: {
+                cors: {
+                    origin: ['*'],
+                    additionalHeaders: ['cache-control', 'x-requested-with']
+                }
+            }
+        }
+    );
     server.route(route);
 });
 

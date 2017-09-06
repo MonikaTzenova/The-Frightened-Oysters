@@ -1,21 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-
 import { AppRouting } from './app.routing';
 
-import { SharedModule } from './modules/shared/shared.module';
-
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from './../environments/firebase.config';
-import {ToastModule} from 'ng2-toastr/ng2-toastr';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+// External Modules
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Internal Modules
+import { SharedModule } from './modules/shared/shared.module';
+import { AuthenticationModule } from './modules/authentication/authentication.module';
+// import { ProductsModule } from './products/products.module';
+
+// Components
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProductsComponent } from './components/products/list/products.component';
@@ -33,22 +36,23 @@ import { ProductsModule } from './modules/products/products.module';
 @NgModule({
   imports: [
     BrowserModule,
-    SharedModule,
     AppRouting,
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    CoreModule.forRoot(),
     CarouselModule,
     ToastModule.forRoot(),
     BrowserAnimationsModule,
+
+    SharedModule,
+    CoreModule.forRoot(),
+
+    AuthenticationModule
     // ProductsModule
   ],
   declarations: [
     AppComponent,
-    LoginComponent,
-    SignUpComponent,
     HomeComponent,
     ProfileComponent,
     // ProductsComponent,
