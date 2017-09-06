@@ -2002,6 +2002,6 @@ export class ProductsService {
   getAll() { return this.items; }
 
   getById(id: number): any{
-     return this.items[id];
+     return this.items[id-1];
   }
 }
