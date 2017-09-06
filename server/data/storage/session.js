@@ -62,7 +62,33 @@ const create = function(username) {
     return promise;
 };
 
+const deleteSession = function(sessionId) {
+    let promise = new Promise((resolve, reject) => {
+        fetch()
+            .then(sessions => {
+                // remove users session if already exists
+                sessions = sessions.filter(session => session.session !== sessionId);
+
+                const dataToWrite = helper.encrypt(sessions);
+                fs.writeFile(sessionFilePath, dataToWrite, (err) => {
+                    if (err) {
+                        reject(err);
+                        return;
+                    }
+
+                    resolve({success: true});
+                });
+            })
+            .catch(err => {
+                reject(err);
+            });
+    });
+
+    return promise;
+}
+
 module.exports = {
     create,
-    fetch
+    fetch,
+    deleteSession
 };

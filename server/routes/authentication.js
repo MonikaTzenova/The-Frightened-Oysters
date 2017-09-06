@@ -1,4 +1,5 @@
 const { authenticationData } = require('../data');
+const helper = require('./helper');
 
 const login = {
     method: 'POST',
@@ -38,7 +39,29 @@ const register = {
     }
 };
 
+const logout = {
+    method: 'GET',
+    path: '/api/auth/logout',
+    handler: function(request, reply) {
+        const cookie = helper.getCookie(request.headers);
+
+        return authenticationData.logout(cookie)
+            .then(response => {
+                return reply(response);
+            })
+            .catch(error => {
+                return reply({
+                    error: {
+                        type: error.type || 'unknown',
+                        message: `Error - ${error.message}`
+                    }
+                });
+            });
+    }
+};
+
 module.exports = {
     login,
-    register
+    register,
+    logout
 };

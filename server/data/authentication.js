@@ -48,6 +48,10 @@ const login = function(params) {
     return promise;
 };
 
+const logout = function(sessionId) {
+    return sessionStorage.deleteSession(sessionId);
+};
+
 const getUsernameByCookie = function(cookie) {
     let promise = new Promise((resolve, reject) => {
         return sessionStorage.fetch()
@@ -87,6 +91,7 @@ const validateSession = function(cookie) {
 module.exports = {
     register,
     login,
+    logout,
     validateSession,
     getUsernameByCookie
 };
