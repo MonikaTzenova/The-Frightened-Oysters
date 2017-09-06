@@ -1,7 +1,9 @@
-import { ProductsService } from '../../services/products.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ProductsService } from '../../services/products.service';
 import { PromotionsService } from '../../services/promotions.service';
+import { UsersService } from './../../services/users.service';
+import { CookieService } from 'ng2-cookies';
+import { AuthenticationService } from './../../services/authentication.service';
 
 @NgModule({})
 export class CoreModule {
@@ -9,8 +11,11 @@ export class CoreModule {
     return {
       ngModule: CoreModule,
       providers: [
+        CookieService,
+        AuthenticationService,
         PromotionsService,
         ProductsService,
+        UsersService
       ],
     };
   }
