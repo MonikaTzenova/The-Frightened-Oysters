@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { LoginComponent } from './components/login/login.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+// Modules
+import { AuthenticationModule } from './modules/authentication/authentication.module';
+
+// Components
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/list/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -16,6 +18,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full', },
 
+    // Authentication
+    { path: 'auth', loadChildren: './modules/authentication/authentication.module#AuthenticationModule' },
+
     { path: 'home', component: HomeComponent },
     { path: 'products', component: ProductsComponent },
     // { path: 'products', loadChildren: './products/products.module#ProductsModule' },
@@ -25,8 +30,6 @@ const appRoutes: Routes = [
     { path: 'check-out', component: CheckOutComponent },
     { path: 'about', component: AboutComponent },
     { path: 'cart', component: CartComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'sign-up', component: SignUpComponent },
 
     { path: '**', component: NotFoundComponent }
 ];
