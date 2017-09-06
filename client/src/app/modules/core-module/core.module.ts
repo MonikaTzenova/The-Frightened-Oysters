@@ -1,3 +1,5 @@
+import { PublicGuardService } from './../../services/guards/public-guard.service';
+import { LoggedGuardService } from './../../services/guards/logged-guard.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { PromotionsService } from '../../services/promotions.service';
@@ -17,7 +19,9 @@ export class CoreModule {
         PromotionsService,
         ProductsService,
         UsersService,
-        ProfileResolverService
+        ProfileResolverService,
+        LoggedGuardService,
+        PublicGuardService
       ],
     };
   }

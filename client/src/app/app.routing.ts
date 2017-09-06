@@ -1,3 +1,4 @@
+import { LoggedGuardService } from './services/guards/logged-guard.service';
 import { ProfileResolverService } from './services/profile-resolver.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
@@ -28,8 +29,8 @@ const appRoutes: Routes = [
     } },
     // { path: 'products', component: ProductsComponent },
     { path: 'products', loadChildren: './modules/products/products.module#ProductsModule' },
-    { path: 'add-edit-product', component: AddEditProductComponent },
-    { path: 'history', component: HistoryComponent },
+    { path: 'add-edit-product', component: AddEditProductComponent, canActivate: [LoggedGuardService] },
+    { path: 'history', component: HistoryComponent, canActivate: [LoggedGuardService] },
     { path: 'check-out', component: CheckOutComponent },
     { path: 'about', component: AboutComponent },
     { path: 'cart', component: CartComponent },
