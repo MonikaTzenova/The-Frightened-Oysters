@@ -2001,7 +2001,7 @@ export class ProductsService {
 
   getAll() { return this.items; }
 
-  getById(id: number): any {
-    return this.items[id - 1];
-  }
+  getById(id) {
+	    return this.items.find(x => x.id === id);
+	  }
 }

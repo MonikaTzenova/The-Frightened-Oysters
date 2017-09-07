@@ -14,7 +14,7 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    const id = (+this.activatedRoute.snapshot.params['id'] - 1);
+    const id = (+this.activatedRoute.snapshot.params['id']);
     this.details = this.productsService.getById(id);
   }
 
