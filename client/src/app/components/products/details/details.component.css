@@ -1,0 +1,12 @@
+img {
+    display: block;
+    margin: auto;
+}
+
+.container {
+    max-width: 45rem;
+}
+
+.btn {
+    width: 100%;
+}

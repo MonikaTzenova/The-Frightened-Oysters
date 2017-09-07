@@ -1,22 +1,16 @@
+<p></p>
 <div class="container">
-<div class="col-md-12">
-  <div class="thumbnail">
-    <img src="{{details.image}}" class="img-responsive">
-  </div>
-    <div class="caption">
-      <h3 class="text-center">{{details.name}}</h3>
-      <h4 class="text-center">Price: {{details.price}}</h4>
-      <h4 class="text-center">Size: {{details.size}}</h4>
-      <h4 class="text-center">OS: {{details.os}}</h4>
-      <h4 class="text-center">Storage: {{details.storage}}</h4>
-      <h4 class="text-center">Display Size: {{details.displaySize}}</h4>
-      <h4 class="text-center">Camera: {{details.cameraSize}}</h4>
-      <h4 class="text-center">RAM : {{details.RAM}}</h4>
-      <h4 class="text-center">Chipset: {{details.chipset}}</h4>
-      <h4 class="text-center">BatteryMaH: {{details.batteryMaH}}</h4>
-    </div>
-    <div class="btn-ground text-center col-md-12">
-      <button class="btn btn-success btn-lg ">Add to cart</button>
-      <a href="products/{{details.id}}" class="btn btn-primary btn-lg " role="button">Details</a>
-    </div>
+    <img src="{{details.image}}" class="centered">
+    <h3 class="text-center">{{details.name}}</h3>
+    <p>&nbsp;</p>
+    <h4 class="text-left">Size: {{details.size}}</h4>
+    <h4 class="text-left">Display size: {{details.displaySize}}</h4>
+    <h4 class="text-left">OS: {{details.os}}</h4>
+    <h4 class="text-left">Storage: {{details.storage}}</h4>
+    <h4 class="text-left">Memory : {{details.memory}}</h4>
+    <h4 class="text-left">Camera: {{details.cameraSize}}</h4>
+    <h4 class="text-left">Chipset: {{details.chipset}}</h4>
+    <h4 class="text-left">BatteryMaH: {{details.batteryMaH}}</h4>
+    <h4 class="text-left">Price: {{details.price}}</h4>
+    <button class="btn btn-success btn-lg ">Add to cart</button>
 </div>
