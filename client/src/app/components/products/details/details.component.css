@@ -1,6 +1,7 @@
 img {
     display: block;
     margin: auto;
+    margin-top: 1rem;
 }
 
 .container {
@@ -9,4 +10,8 @@ img {
 
 .btn {
     width: 100%;
+}
+
+h3 {
+    margin-bottom: 2rem;
 }
