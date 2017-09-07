@@ -2003,5 +2003,11 @@ export class ProductsService {
 
   getById(id) {
 	    return this.items.find(x => x.id === id);
-	  }
+
+  }
+  add(product: any){
+    const last = this.items[this.items.length-1];
+    product.id = last.id + 1;
+    this.items.push(product);
+  }
 }
