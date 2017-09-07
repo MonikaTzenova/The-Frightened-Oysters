@@ -46,5 +46,9 @@ export class PromotionsService {
   ];
 
   getAll() { return this.promotions; }
+  
+    getById(id) {
+	    return this.promotions.find(x => x.id === id);
+	}
 }
 
