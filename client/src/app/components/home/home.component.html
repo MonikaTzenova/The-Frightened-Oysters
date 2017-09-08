@@ -5,7 +5,7 @@
         <img src="{{item.image}}">
         <div class="carousel-caption">
             <h3>{{item.name}} </h3>
-            <a href="products/{{item.id}}" class="btn btn-link btn-lg" role="button">Details</a>
+            <a [routerLink]="[item.id]" class="btn btn-link btn-lg" role="button">Details</a>
         </div>
     </slide>
 </carousel>
