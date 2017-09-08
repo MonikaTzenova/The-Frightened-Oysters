@@ -50,9 +50,7 @@ export class ProfileComponent implements OnInit {
     ]);
 
     this.phone  = new FormControl(this.user.phone, [
-      Validators.required,
-      Validators.min(3),
-      Validators.max(20)
+      Validators.required
     ]);
 
     this.address  = new FormControl(this.user.address, [
