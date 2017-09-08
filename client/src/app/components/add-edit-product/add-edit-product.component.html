@@ -13,50 +13,50 @@
     <div class="form-group">
       <label for="size" >Size*</label>
       <div *ngIf="size.hasError('required') && size.touched" class="validationError">Size is required</div>
-      <input type="text" class="form-control" name="size" formControlName="size"/>
+      <input type="text" class="form-control" name="size" placeholder="e.g 83g, 11.4mm thickness" formControlName="size"/>
     </div>
 
     <div class="form-group">
       <label for="price" >Price*</label>
       <div *ngIf="price.hasError('required') && price.touched" class="validationError">Price is required</div>
-      <input type="text" class="form-control" name="price" formControlName="price"/>
+      <input type="text" class="form-control" name="price" placeholder="About 50 EUR" formControlName="price"/>
     </div>
 
     <div class="form-group">
       <label for="display" >Display*</label>
       <div *ngIf="display.hasError('required') && display.touched" class="validationError">Display is required</div>
-      <input type="text" class="form-control" name="display" formControlName="display"/>
+      <input type="text" class="form-control" name="display"   placeholder="2.4" formControlName="display"/>
     </div>
 
     <div class="form-group">
       <label for="storage" >Storage*</label>
       <div *ngIf="storage.hasError('required') && storage.touched" class="validationError">Storage is required</div>
-      <input type="text" class="form-control" name="storage" formControlName="storage"/>
+      <input type="text" class="form-control" name="storage"  placeholder="64MB RAM storage, microSD card slot" formControlName="storage"/>
     </div>
 
     <div class="form-group">
       <label for="memory" >Memory*</label>
       <div *ngIf="memory.hasError('required') && memory.touched" class="validationError">Memory is required</div>
-      <input type="text" class="form-control" name="memory" formControlName="memory"/>
+      <input type="text" class="form-control" name="memory"  placeholder="64MB RAM" formControlName="memory"/>
     </div>
 
     <div class="form-group">
       <label for="camera" >Camera*</label>
       <div *ngIf="camera.hasError('required') && camera.touched" class="validationError">Camera is required</div>
-      <input type="text" class="form-control" name="camera" formControlName="camera"/>
+      <input type="text" class="form-control" name="camera" placeholder="3MP" formControlName="camera"/>
     </div>
 
     <div class="form-group">
       <label for="battery" >Memory*</label>
       <div *ngIf="battery.hasError('required') && battery.touched" class="validationError">Battery is required</div>
-      <input type="text" class="form-control" name="battery" formControlName="battery"/>
+      <input type="text" class="form-control" name="battery" placeholder="1000mAh" formControlName="battery"/>
     </div>
 
     <div class="form-group">
       <label for="company" >Photo URL*</label>
       <div *ngIf="photoUrl.hasError('required') && photoUrl.touched" class="validationError">Avatar URL is required</div>
       <div *ngIf="photoUrl.hasError('pattern') && photoUrl.touched" class="validationError">Avatar URL should be a valid link</div>
-      <input type="text" class="form-control" name="photoUrl" formControlName="photoUrl"/>
+      <input type="text" class="form-control" name="photoUrl"  placeholder="http://" formControlName="photoUrl"/>
     </div>
 
     <div class="form-group">

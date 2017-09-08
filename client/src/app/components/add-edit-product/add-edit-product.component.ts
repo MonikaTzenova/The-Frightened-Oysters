@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ProductsService } from './../../services/products.service';
 import { Router } from '@angular/router';
+import { ToastsManager } from 'ng2-toastr';
 
 import { IProduct } from './../../models/IProduct';
 import { ICookie } from './../../models/ICookie';
@@ -25,7 +26,9 @@ export class AddEditProductComponent implements OnInit {
   public addProductForm: FormGroup;
 
 
-  constructor(private router: Router, private productsService: ProductsService) { }
+  constructor(private router: Router, private productsService: ProductsService,  private vcRef: ViewContainerRef, public toastr: ToastsManager) {
+    this.toastr.setRootViewContainerRef(vcRef); 
+  }
 
   ngOnInit() {
     this.buildAddProductFormData();
@@ -88,6 +91,7 @@ export class AddEditProductComponent implements OnInit {
     };
 
     this.productsService.add(productData);
+    this.toastr.success('Product added successfully')
 
   }
 }

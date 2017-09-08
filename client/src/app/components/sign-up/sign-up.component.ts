@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UsersService } from './../../services/users.service';
 import { Router } from '@angular/router';
+import { ToastsManager } from 'ng2-toastr';
 
 import { ICookie } from './../../models/ICookie';
 import { IUser } from './../../models/IUser';
@@ -22,7 +23,9 @@ export class SignUpComponent implements OnInit {
 
   private registerForm: FormGroup;
 
-  constructor(private router: Router, private userService: UsersService) { }
+  constructor(private router: Router, private userService: UsersService, private vcRef: ViewContainerRef, public toastr: ToastsManager) { 
+    this.toastr.setRootViewContainerRef(vcRef); 
+   }
 
   ngOnInit() {
     this.buildRegisterFormsData();
@@ -81,6 +84,7 @@ export class SignUpComponent implements OnInit {
   register(userData: IUser) {
     const handleSuccessResponse = (cookie: ICookie) => {
       this.router.navigate(['home'], { queryParams: { 'refresh': 1 } });
+      this.toastr.success('Registration successfull');
     };
 
     this.userService.register(userData)
