@@ -5,10 +5,10 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 // Modules
 import { AuthenticationModule } from './modules/authentication/authentication.module';
+import { ProductsModule } from './modules/products/products.module';
 
 // Components
 import { HomeComponent } from './components/home/home.component';
-// import { ProductsComponent } from './components/products/list/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
 import { HistoryComponent } from './components/history/history.component';
@@ -27,9 +27,11 @@ const appRoutes: Routes = [
     { path: 'profile', component: ProfileComponent, resolve: {
         'user': ProfileResolverService
     } },
-    // { path: 'products', component: ProductsComponent },
+
+    // Products
     { path: 'products', loadChildren: './modules/products/products.module#ProductsModule' },
     { path: 'add-edit-product', component: AddEditProductComponent, canActivate: [LoggedGuardService] },
+
     { path: 'history', component: HistoryComponent, canActivate: [LoggedGuardService] },
     { path: 'check-out', component: CheckOutComponent },
     { path: 'about', component: AboutComponent },

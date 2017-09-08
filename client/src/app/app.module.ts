@@ -16,8 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Internal Modules
 import { SharedModule } from './modules/shared/shared.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
+import { ProductsModule } from './modules/products/products.module';
 import { ModalModule } from 'ngx-bootstrap';
-// import { ProductsModule } from './products/products.module';
 
 // Pipes
 import { PhonePipe } from './pipes/phone-pipe';
@@ -26,7 +26,6 @@ import { PhonePipe } from './pipes/phone-pipe';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { ProductsComponent } from './components/products/list/products.component';
 import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
 import { HistoryComponent } from './components/history/history.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
@@ -36,7 +35,6 @@ import { CoreModule } from './modules/core-module/core.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { DetailsComponent } from './components/products/details/details.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { ProductsModule } from './modules/products/products.module';
 
 @NgModule({
   imports: [
@@ -56,8 +54,8 @@ import { ProductsModule } from './modules/products/products.module';
     CoreModule.forRoot(),
     ModalModule.forRoot(),
 
-    AuthenticationModule
-    // ProductsModule
+    AuthenticationModule,
+    ProductsModule
   ],
   declarations: [
     AppComponent,
