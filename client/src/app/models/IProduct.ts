@@ -1,12 +1,21 @@
 export interface IProduct {
-    size: string;
+    id: number,
     name: string;
-    price: string;
-    display: string;
-    storage: string;
-    memory: string;
-    photoUrl: string;
-    camera: string;
-    battery: string;
-    id: string;
+    description: string,
+    price: number,
+    brand: string,
+    model: string,
+    year: number,
+    os: string,
+    color: string,
+    size: number,
+    resolution: string,
+    camera: number,
+    battery: number,
+    processor: string,
+    memory: number,
+    storage: number,
+    imageUrl: string,
+    ownerUsername: string,
+    dateAdded: string
 }
