@@ -1,9 +1,8 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../../../services/products.service';
-import { PromotionsService } from '../../../services/promotions.service';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx';
-import { CartService } from '../../../services/cart.service';
+
+import { IProduct } from '../../../models/IProduct';
 
 @Component({
   selector: 'app-products',
@@ -11,65 +10,25 @@ import { CartService } from '../../../services/cart.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  @ViewChild('input')
-  input: ElementRef;
-  products;
-  promotions;
+  products: IProduct[];
+  productsOdd: IProduct[];
+  productsEven: IProduct[];
 
-  constructor(private productsService: ProductsService,
-    private promotionsService: PromotionsService,
-    private cartService: CartService) { }
+  constructor(private activateRoute: ActivatedRoute) { 
+    this.productsOdd = [];
+    this.productsEven = [];
+  }
 
   ngOnInit() {
-    this.products = this.productsService.getAll();
-    this.promotions = this.promotionsService.getAll();
-    // const eventObservable = Observable.fromEvent(this.input.nativeElement, 'keyup');
-    // eventObservable.subscribe();
-  }
+    this.products = this.activateRoute.snapshot.data['products'];
 
-  addPromoToCart(addPromoBtn, removePromoBtn) {
-    addPromoBtn.className = 'hidden';
-    removePromoBtn.className = 'btn btn-danger btn-lg btn-block';
-
-    const id = addPromoBtn.name;
-
-    this.promotions.findIndex(el => {
-      if (el.id === id) {
-        this.cartService.items.push(el);
+    for (let i = 0; i < this.products.length; i += 1) {
+      let currentProduct = this.products[i];
+      if (i % 2 === 0) {
+        this.productsOdd.push(currentProduct);
+      } else {
+        this.productsEven.push(currentProduct);
       }
-    });
-  }
-
-  removePromoFromCart(addPromoBtn, removePromoBtn) {
-    removePromoBtn.className = 'hidden';
-    addPromoBtn.className = 'btn btn-success btn-lg btn-block';
-
-    const id = addPromoBtn.name;
-    const idexOfItem = this.cartService.items.findIndex(el => el.id === id);
-
-    this.cartService.items.splice(idexOfItem, 1);
-  }
-
-  addProductToCart(addProductBtn, removeProductBtn) {
-    addProductBtn.className = 'hidden';
-    removeProductBtn.className = 'btn btn-danger btn-lg btn-block';
-
-    const id = +addProductBtn.name;
-
-    this.products.findIndex(el => {
-      if (el.id === id) {
-        this.cartService.items.push(el);
-      }
-    });
-  }
-
-  removeProductFromCart(addProductBtn, removeProductBtn) {
-    removeProductBtn.className = 'hidden';
-    addProductBtn.className = 'btn btn-success btn-lg btn-block';
-
-    const id = addProductBtn.name;
-    const idexOfItem = this.cartService.items.findIndex(el => el.id === id);
-
-    this.cartService.items.splice(idexOfItem, 1);
+    }
   }
 }

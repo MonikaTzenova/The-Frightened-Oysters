@@ -1,0 +1,26 @@
+<div class='productWrap'>
+
+  <div class='imageWrap'>
+    <a [routerLink]="[product?.id]"><img src={{product?.imageUrl}}></a>
+  </div>
+
+  <div class='infoWrap'>
+    <div class="title">
+      <a [routerLink]="[product?.id]">{{product?.name}}</a>
+    </div>
+
+    <ul class="productTextUl">
+      <li>{{product?.model}} {{product?.brand}} ({{product?.year}})</li>
+      <li>OS: {{product?.os}}</li>
+      <li>Processor: {{product?.processor}}</li>
+      <li>Memory: {{product?.memory}}, Storage: {{product?.storage}}</li>
+      <li>Price: {{product?.price}} BGN</li>
+    </ul>
+
+    <div class="buttonWrap">
+      <a [routerLink]="[product?.id]" class="btn btn-primary btn-sm btn-block" role="button">Details</a>
+    </div>    
+
+  </div>
+
+</div>
