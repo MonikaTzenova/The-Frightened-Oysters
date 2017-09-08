@@ -1,20 +1,21 @@
-<h1>Info thanks to <a href="http://www.gsmarena.com/" target="blank">GSM arena</a></h1>
-<hr>
-<h2>Our promotions</h2>
-<div *ngFor="let item of promotions">
-    <img src="{{item.image}}" class="centered">
-    <h3 class="text-center">{{item.name}}</h3>
-    <a [routerLink]="[item.id]" class="btn btn-primary btn-lg btn-block" role="button">Details</a>
-    <button class="btn btn-success btn-lg btn-block" name="{{item.id}}" (click)="addPromoToCart(addPromoBtn, removePromoBtn)" #addPromoBtn>Add to cart</button>
-    <button class="hidden" (click)="removePromoFromCart(addPromoBtn, removePromoBtn)" #removePromoBtn>Remove from cart</button>
+<div class="col-md-12">
+        
+    <h2>Products</h2>
+
 </div>
-<hr>
-<h2>Our products</h2>
-<div class="search"><label>Search by name:&nbsp;</label> <input #input placeholder=" e.g. note" /></div>
-<div *ngFor="let item of products | searchfilter:input.value">
-    <img src="{{item.image}}" class="centered">
-    <h3 class="text-center">{{item.name}}</h3>
-    <a [routerLink]="[item.id]" class="btn btn-primary btn-lg btn-block" role="button">Details</a>
-    <button class="btn btn-success btn-lg btn-block" name="{{item.id}}" (click)="addProductToCart(addProductBtn, removeProductBtn)" #addProductBtn>Add to cart</button>
-    <button class="hidden" (click)="removeProductFromCart(addProductBtn, removeProductBtn)" #removeProductBtn>Remove from cart</button>
+
+<div class="col-md-6">
+    <ul class='productUl'>
+        <li *ngFor="let productOdd of productsOdd">
+            <app-list-product-element [product]='productOdd'></app-list-product-element>
+        </li> 
+    </ul>
+</div>
+
+<div class="col-md-6">
+    <ul class='productUl'>
+        <li *ngFor="let productEven of productsEven">
+            <app-list-product-element [product]='productEven'></app-list-product-element>
+        </li> 
+    </ul>
 </div>
