@@ -5,18 +5,16 @@
     <img src="{{item.image}}" class="centered">
     <h3 class="text-center">{{item.name}}</h3>
     <a href="products/{{item.id}}" class="btn btn-primary btn-lg btn-block" role="button">Details</a>
-    <button class="btn btn-success btn-lg btn-block">Add to cart</button>
+    <button class="btn btn-success btn-lg btn-block" name="{{item.id}}" (click)="addPromoToCart(addPromoBtn, removePromoBtn)" #addPromoBtn>Add to cart</button>
+    <button class="hidden" (click)="removePromoFromCart(addPromoBtn, removePromoBtn)" #removePromoBtn>Remove from cart</button>
 </div>
-<p></p>
 <hr>
-<p></p>
 <h2>Our products</h2>
-
 <div class="search"><label>Search by name:&nbsp;</label> <input #input placeholder=" e.g. note" /></div>
 <div *ngFor="let item of products | searchfilter:input.value">
     <img src="{{item.image}}" class="centered">
     <h3 class="text-center">{{item.name}}</h3>
-    <a [routerLink]="['/products' , item.id]" class="btn btn-primary btn-lg btn-block" role="button">Details</a>
-    <button class="btn btn-success btn-lg btn-block">Add to cart</button>
+    <a href="products/{{item.id}}" class="btn btn-primary btn-lg btn-block" role="button">Details</a>
+    <button class="btn btn-success btn-lg btn-block" name="{{item.id}}" (click)="addProductToCart(addProductBtn, removeProductBtn)" #addProductBtn>Add to cart</button>
+    <button class="hidden" (click)="removeProductFromCart(addProductBtn, removeProductBtn)" #removeProductBtn>Remove from cart</button>
 </div>
-<p></p>

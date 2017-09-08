@@ -15,7 +15,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 835',
     batteryMaH: '4000mAh',
-    price: 'About 850 USD',
+    price: ' 850 USD',
     id: 1
   },
   {
@@ -29,7 +29,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'MT6757 Helio P20',
     batteryMaH: '3300mAh',
-    price: 'About 250 EUR',
+    price: ' 250 EUR',
     id: 2
   },
   {
@@ -43,7 +43,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: '',
     batteryMaH: '2050mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 3
   },
   {
@@ -57,7 +57,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 625',
     batteryMaH: '3300mAh',
-    price: 'About 240 USD',
+    price: ' 240 USD',
     id: 4
   },
   {
@@ -71,7 +71,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7870 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 6
   },
   {
@@ -85,7 +85,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 8890 Octa',
     batteryMaH: '3200mAh',
-    price: 'About 540 EUR',
+    price: ' 540 EUR',
     id: 7
   },
   {
@@ -99,7 +99,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 7570 Quad',
     batteryMaH: '2400mAh',
-    price: 'About 220 EUR',
+    price: ' 220 EUR',
     id: 8
   },
   {
@@ -113,7 +113,7 @@ export class ProductsService {
     memory: '6GB RAM',
     chipset: 'Exynos 8895 Octa',
     batteryMaH: '3300mAh',
-    price: 'About 1000 EUR',
+    price: ' 1000 EUR',
     id: 9
   },
   {
@@ -127,7 +127,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7870 Octa',
     batteryMaH: '3600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 10
   },
   {
@@ -141,7 +141,7 @@ export class ProductsService {
     memory: '768MB RAM',
     chipset: 'Exynos 3250 Dual',
     batteryMaH: '300mAh',
-    price: 'About 220 EUR',
+    price: ' 220 EUR',
     id: 11
   },
   {
@@ -155,7 +155,7 @@ export class ProductsService {
     memory: '768MB RAM',
     chipset: 'Exynos 7270',
     batteryMaH: '380mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 12
   },
   {
@@ -169,7 +169,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 7570 Quad',
     batteryMaH: '2800mAh',
-    price: 'About 240 EUR',
+    price: ' 240 EUR',
     id: 13
   },
   {
@@ -183,7 +183,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Spreadtrum SC9830',
     batteryMaH: '1500mAh',
-    price: 'About 110 EUR',
+    price: ' 110 EUR',
     id: 14
   },
   {
@@ -197,7 +197,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 820',
     batteryMaH: '6000mAh',
-    price: 'About 750 EUR',
+    price: ' 750 EUR',
     id: 15
   },
   {
@@ -211,7 +211,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7580 Octa',
     batteryMaH: '3300mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 16
   },
   {
@@ -225,7 +225,7 @@ export class ProductsService {
     memory: '768MB RAM',
     chipset: 'Exynos 7270',
     batteryMaH: '380mAh',
-    price: 'About 390 EUR',
+    price: ' 390 EUR',
     id: 17
   },
   {
@@ -239,7 +239,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 7870 Octa',
     batteryMaH: '2350mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 18
   },
   {
@@ -253,7 +253,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'MT6737T',
     batteryMaH: '2600mAh',
-    price: 'About 140 EUR',
+    price: ' 140 EUR',
     id: 19
   },
   {
@@ -267,7 +267,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Snapdragon 625',
     batteryMaH: '3300mAh',
-    price: 'About 260 EUR',
+    price: ' 260 EUR',
     id: 20
   },
   {
@@ -281,7 +281,7 @@ export class ProductsService {
     memory: '768MB RAM',
     chipset: 'Exynos 7270',
     batteryMaH: '380mAh',
-    price: 'About 450 EUR',
+    price: ' 450 EUR',
     id: 21
   },
   {
@@ -295,7 +295,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 7870',
     batteryMaH: '7300mAh',
-    price: 'About 220 EUR',
+    price: ' 220 EUR',
     id: 22
   },
   {
@@ -309,7 +309,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2600mAh',
-    price: 'About 270 EUR',
+    price: ' 270 EUR',
     id: 23
   },
   {
@@ -323,7 +323,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 626',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 24
   },
   {
@@ -337,7 +337,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 626',
     batteryMaH: '3300mAh',
-    price: 'About 420 EUR',
+    price: ' 420 EUR',
     id: 25
   },
   {
@@ -351,7 +351,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 7570 Quad',
     batteryMaH: '2400mAh',
-    price: 'About 230 EUR',
+    price: ' 230 EUR',
     id: 26
   },
   {
@@ -365,7 +365,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'MT6737T',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 27
   },
   {
@@ -379,7 +379,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7880 Octa',
     batteryMaH: '3600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 28
   },
   {
@@ -393,7 +393,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Spreadtrum SC8830',
     batteryMaH: '4000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 29
   },
   {
@@ -407,7 +407,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Snapdragon 652',
     batteryMaH: '4000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 30
   },
   {
@@ -421,7 +421,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 430',
     batteryMaH: '2600mAh',
-    price: 'About 235 USD',
+    price: ' 235 USD',
     id: 31
   },
   {
@@ -435,7 +435,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Exynos 3475 Quad',
     batteryMaH: '2200mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 32
   },
   {
@@ -449,7 +449,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 8890 Octa',
     batteryMaH: '3500mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 33
   },
   {
@@ -463,7 +463,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Spreadtrum SC7730',
     batteryMaH: '2600mAh',
-    price: 'About 110 EUR',
+    price: ' 110 EUR',
     id: 34
   },
   {
@@ -477,7 +477,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7880 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 35
   },
   {
@@ -491,7 +491,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7870 Octa',
     batteryMaH: '3300mAh',
-    price: 'About 280 EUR',
+    price: ' 280 EUR',
     id: 36
   },
   {
@@ -505,7 +505,7 @@ export class ProductsService {
     memory: '6GB RAM',
     chipset: 'Snapdragon 653',
     batteryMaH: '4000mAh',
-    price: 'About 620 EUR',
+    price: ' 620 EUR',
     id: 37
   },
   {
@@ -519,7 +519,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Exynos 7578',
     batteryMaH: '2300mAh',
-    price: 'About 200 EUR',
+    price: ' 200 EUR',
     id: 38
   },
   {
@@ -533,7 +533,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Exynos 3475 Quad',
     batteryMaH: '2600mAh',
-    price: 'About 110 EUR',
+    price: ' 110 EUR',
     id: 39
   },
   {
@@ -547,7 +547,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'Exynos 3250 Dual',
     batteryMaH: '300mAh',
-    price: 'About 350 EUR',
+    price: ' 350 EUR',
     id: 40
   },
   {
@@ -561,7 +561,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 530 EUR',
+    price: ' 530 EUR',
     id: 41
   },
   {
@@ -575,7 +575,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Spreadtrum SC9830',
     batteryMaH: '1500mAh',
-    price: 'About 90 EUR',
+    price: ' 90 EUR',
     id: 42
   },
   {
@@ -589,7 +589,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 8895 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 43
   },
   {
@@ -603,7 +603,7 @@ export class ProductsService {
     memory: '6GB RAM',
     chipset: 'Exynos 8895 Octa',
     batteryMaH: '3500mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 44
   },
   {
@@ -617,7 +617,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'MSM8x26',
     batteryMaH: '300mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 45
   },
   {
@@ -631,7 +631,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 7580 Octa',
     batteryMaH: '5700mAh',
-    price: 'About 640 EUR',
+    price: ' 640 EUR',
     id: 46
   },
   {
@@ -645,7 +645,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7580 Octa',
     batteryMaH: '3300mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 47
   },
   {
@@ -659,7 +659,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Spreadtrum SC8830',
     batteryMaH: '2600mAh',
-    price: 'About 160 EUR',
+    price: ' 160 EUR',
     id: 48
   },
   {
@@ -673,7 +673,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '5000mAh',
-    price: 'About 180 EUR',
+    price: ' 180 EUR',
     id: 49
   },
   {
@@ -687,7 +687,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '3300mAh',
-    price: 'About 560 EUR',
+    price: ' 560 EUR',
     id: 50
   },
   {
@@ -701,7 +701,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '4000mAh',
-    price: 'About 130 EUR',
+    price: ' 130 EUR',
     id: 51
   },
   {
@@ -715,7 +715,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: '',
     batteryMaH: '1800mAh',
-    price: 'About 260 EUR',
+    price: ' 260 EUR',
     id: 52
   },
   {
@@ -729,7 +729,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 3475 Quad',
     batteryMaH: '2600mAh',
-    price: 'About 150 EUR',
+    price: ' 150 EUR',
     id: 53
   },
   {
@@ -743,7 +743,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 617',
     batteryMaH: '3300mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 54
   },
   {
@@ -757,7 +757,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '3100mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 55
   },
   {
@@ -771,7 +771,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 617',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 57
   },
   {
@@ -785,7 +785,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Spreadtrum SC9830',
     batteryMaH: '1500mAh',
-    price: 'About 80 EUR',
+    price: ' 80 EUR',
     id: 58
   },
   {
@@ -799,7 +799,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Spreadtrum SC8830',
     batteryMaH: '4000mAh',
-    price: 'About 220 EUR',
+    price: ' 220 EUR',
     id: 59
   },
   {
@@ -813,7 +813,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Spreadtrum SC9830',
     batteryMaH: '2050mAh',
-    price: 'About 130 EUR',
+    price: ' 130 EUR',
     id: 60
   },
   {
@@ -827,7 +827,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 7580 Octa',
     batteryMaH: '2900mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 61
   },
   {
@@ -841,7 +841,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 62
   },
   {
@@ -855,7 +855,7 @@ export class ProductsService {
     memory: '768MB RAM',
     chipset: 'Exynos 7270',
     batteryMaH: '380mAh',
-    price: 'About 350 EUR',
+    price: ' 350 EUR',
     id: 63
   },
   {
@@ -869,7 +869,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 8890 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 64
   },
   {
@@ -883,7 +883,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 820',
     batteryMaH: '3000mAh',
-    price: 'About 450 EUR',
+    price: ' 450 EUR',
     id: 65
   },
   {
@@ -897,7 +897,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Exynos 3475 Quad',
     batteryMaH: '2600mAh',
-    price: 'About 140 EUR',
+    price: ' 140 EUR',
     id: 67
   },
   {
@@ -911,7 +911,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'Exynos 3250 Dual',
     batteryMaH: '250mAh',
-    price: 'About 270 EUR',
+    price: ' 270 EUR',
     id: 68
   },
   {
@@ -925,7 +925,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 540 EUR',
+    price: ' 540 EUR',
     id: 69
   },
   {
@@ -939,7 +939,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '3000mAh',
-    price: 'About 180 EUR',
+    price: ' 180 EUR',
     id: 70
   },
   {
@@ -953,7 +953,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 550 EUR',
+    price: ' 550 EUR',
     id: 71
   },
   {
@@ -967,7 +967,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 7580 Octa',
     batteryMaH: '2800mAh',
-    price: 'About 350 EUR',
+    price: ' 350 EUR',
     id: 72
   },
   {
@@ -981,7 +981,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '1900mAh',
-    price: 'About 190 EUR',
+    price: ' 190 EUR',
     id: 73
   },
   {
@@ -995,7 +995,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 74
   },
   {
@@ -1009,7 +1009,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2600mAh',
-    price: 'About 150 EUR',
+    price: ' 150 EUR',
     id: 75
   },
   {
@@ -1023,7 +1023,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '3000mAh',
-    price: 'About 180 EUR',
+    price: ' 180 EUR',
     id: 76
   },
   {
@@ -1037,7 +1037,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 625',
     batteryMaH: '3300mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 77
   },
   {
@@ -1051,7 +1051,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 820',
     batteryMaH: '3500mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 78
   },
   {
@@ -1065,7 +1065,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 820',
     batteryMaH: '4000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 79
   },
   {
@@ -1079,7 +1079,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'Exynos 3250 Dual',
     batteryMaH: '250mAh',
-    price: 'About 220 EUR',
+    price: ' 220 EUR',
     id: 80
   },
   {
@@ -1093,7 +1093,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 820',
     batteryMaH: '3600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 81
   },
   {
@@ -1107,7 +1107,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 600 EUR',
+    price: ' 600 EUR',
     id: 82
   },
   {
@@ -1121,7 +1121,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Spreadtrum SC8830',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 83
   },
   {
@@ -1135,7 +1135,7 @@ export class ProductsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 820',
     batteryMaH: '3600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 84
   },
   {
@@ -1149,7 +1149,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Spreadtrum SC9830',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 85
   },
   {
@@ -1162,7 +1162,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 5433',
     batteryMaH: '5870mAh',
-    price: 'About 520 EUR',
+    price: ' 520 EUR',
     id: 86
   },
   {
@@ -1175,7 +1175,7 @@ export class ProductsService {
     memory: '4MB RAM',
     chipset: '',
     batteryMaH: '800mAh',
-    price: 'About 20 EUR',
+    price: ' 20 EUR',
     id: 87
   },
   {
@@ -1188,7 +1188,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: '',
     batteryMaH: '5000mAh',
-    price: 'About 200 EUR',
+    price: ' 200 EUR',
     id: 88
   },
   {
@@ -1201,7 +1201,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: '',
     batteryMaH: '1500mAh',
-    price: 'About 70 EUR',
+    price: ' 70 EUR',
     id: 89
   },
   {
@@ -1214,7 +1214,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Exynos 7870 Octa',
     batteryMaH: '3000mAh',
-    price: 'About 180 EUR',
+    price: ' 180 EUR',
     id: 90
   },
   {
@@ -1227,7 +1227,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '3500mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 91
   },
   {
@@ -1240,7 +1240,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: '',
     batteryMaH: '6000mAh',
-    price: 'About 340 EUR',
+    price: ' 340 EUR',
     id: 92
   },
   {
@@ -1253,7 +1253,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 615',
     batteryMaH: '3050mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 93
   },
   {
@@ -1266,7 +1266,7 @@ export class ProductsService {
     memory: '128MB RAM',
     chipset: 'Spreadtrum SC7703',
     batteryMaH: '1500mAh',
-    price: 'About 110 EUR',
+    price: ' 110 EUR',
     id: 94
   },
   {
@@ -1279,7 +1279,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 5433',
     batteryMaH: '4000mAh',
-    price: 'About 440 EUR',
+    price: ' 440 EUR',
     id: 95
   },
   {
@@ -1292,7 +1292,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 615',
     batteryMaH: '3000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 96
   },
   {
@@ -1305,7 +1305,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 615',
     batteryMaH: '3050mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 97
   },
   {
@@ -1318,7 +1318,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: '',
     batteryMaH: '3600mAh',
-    price: 'About 130 EUR',
+    price: ' 130 EUR',
     id: 98
   },
   {
@@ -1331,7 +1331,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '6800mAh',
-    price: 'About 280 EUR',
+    price: ' 280 EUR',
     id: 99
   },
   {
@@ -1344,7 +1344,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: '',
     batteryMaH: '6000mAh',
-    price: 'About 250 EUR',
+    price: ' 250 EUR',
     id: 100
   },
   {
@@ -1357,7 +1357,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2600mAh',
-    price: 'About 160 EUR',
+    price: ' 160 EUR',
     id: 101
   },
   {
@@ -1370,7 +1370,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Marvell Armada PXA1908',
     batteryMaH: '2200mAh',
-    price: 'About 220 EUR',
+    price: ' 220 EUR',
     id: 102
   },
   {
@@ -1383,7 +1383,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 615',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 103
   },
   {
@@ -1396,7 +1396,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'Spreadtrum',
     batteryMaH: '1850mAh',
-    price: 'About 110 EUR',
+    price: ' 110 EUR',
     id: 104
   },
   {
@@ -1409,7 +1409,7 @@ export class ProductsService {
     memory: '768MB RAM',
     chipset: 'Spreadtrum SC7727S',
     batteryMaH: '1500mAh',
-    price: 'About 80 EUR',
+    price: ' 80 EUR',
     id: 105
   },
   {
@@ -1422,7 +1422,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 615',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 106
   },
   {
@@ -1435,7 +1435,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2500mAh',
-    price: 'About 260 EUR',
+    price: ' 260 EUR',
     id: 107
   },
   {
@@ -1448,7 +1448,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '1900mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 108
   },
   {
@@ -1461,7 +1461,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2300mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 109
   },
   {
@@ -1474,7 +1474,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '2550mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 110
   },
   {
@@ -1487,7 +1487,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '1900mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 111
   },
   {
@@ -1500,7 +1500,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 112
   },
   {
@@ -1513,7 +1513,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: '',
     batteryMaH: '1500mAh',
-    price: 'About 80 EUR',
+    price: ' 80 EUR',
     id: 113
   },
   {
@@ -1526,7 +1526,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'Spreadtrum SC7715',
     batteryMaH: '1200mAh',
-    price: 'About 100 EUR',
+    price: ' 100 EUR',
     id: 114
   },
   {
@@ -1539,7 +1539,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Snapdragon 805',
     batteryMaH: '3000mAh',
-    price: 'About 500 EUR',
+    price: ' 500 EUR',
     id: 115
   },
   {
@@ -1552,7 +1552,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'Exynos 3250 Dual',
     batteryMaH: '300mAh',
-    price: 'About 230 EUR',
+    price: ' 230 EUR',
     id: 116
   },
   {
@@ -1565,7 +1565,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 400',
     batteryMaH: '2100mAh',
-    price: 'About 160 EUR',
+    price: ' 160 EUR',
     id: 117
   },
   {
@@ -1578,7 +1578,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'Snapdragon 400',
     batteryMaH: '300mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 118
   },
   {
@@ -1591,7 +1591,7 @@ export class ProductsService {
     memory: '',
     chipset: '',
     batteryMaH: '1000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 119
   },
   {
@@ -1604,7 +1604,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'Snapdragon 400',
     batteryMaH: '300mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 120
   },
   {
@@ -1617,7 +1617,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 121
   },
   {
@@ -1630,7 +1630,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '1900mAh',
-    price: 'About 200 EUR',
+    price: ' 200 EUR',
     id: 122
   },
   {
@@ -1643,7 +1643,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: '',
     batteryMaH: '1500mAh',
-    price: 'About 90 EUR',
+    price: ' 90 EUR',
     id: 123
   },
   {
@@ -1656,7 +1656,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 805',
     batteryMaH: '2800mAh',
-    price: 'About 380 EUR',
+    price: ' 380 EUR',
     id: 124
   },
   {
@@ -1669,7 +1669,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 801',
     batteryMaH: '2800mAh',
-    price: 'About 500 EUR',
+    price: ' 500 EUR',
     id: 125
   },
   {
@@ -1682,7 +1682,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Snapdragon 805',
     batteryMaH: '3220mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 126
   },
   {
@@ -1695,7 +1695,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'Exynos 3250 Dual',
     batteryMaH: '300mAh',
-    price: 'About 170 EUR',
+    price: ' 170 EUR',
     id: 127
   },
   {
@@ -1708,7 +1708,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 5420 Octa',
     batteryMaH: '4900mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 128
   },
   {
@@ -1721,7 +1721,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2600mAh',
-    price: 'About 150 EUR',
+    price: ' 150 EUR',
     id: 129
   },
   {
@@ -1734,7 +1734,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '2550mAh',
-    price: 'About 410 EUR',
+    price: ' 410 EUR',
     id: 130
   },
   {
@@ -1747,7 +1747,7 @@ export class ProductsService {
     memory: '768MB RAM',
     chipset: '',
     batteryMaH: '1850mAh',
-    price: 'About 120 EUR',
+    price: ' 120 EUR',
     id: 131
   },
   {
@@ -1760,7 +1760,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '2550mAh',
-    price: 'About 400 EUR',
+    price: ' 400 EUR',
     id: 132
   },
   {
@@ -1773,7 +1773,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Spreadtrum SC8830',
     batteryMaH: '3600mAh',
-    price: 'About 120 EUR',
+    price: ' 120 EUR',
     id: 133
   },
   {
@@ -1786,7 +1786,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Exynos 3475 Quad',
     batteryMaH: '2000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 134
   },
   {
@@ -1799,7 +1799,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2400mAh',
-    price: 'About 200 EUR',
+    price: ' 200 EUR',
     id: 135
   },
   {
@@ -1812,7 +1812,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: '',
     batteryMaH: '4200mAh',
-    price: 'About 210 EUR',
+    price: ' 210 EUR',
     id: 136
   },
   {
@@ -1825,7 +1825,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7420 Octa',
     batteryMaH: '2600mAh',
-    price: 'About 600 EUR',
+    price: ' 600 EUR',
     id: 137
   },
   {
@@ -1838,7 +1838,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: 'Snapdragon 400',
     batteryMaH: '4450mAh',
-    price: 'About 600 EUR',
+    price: ' 600 EUR',
     id: 138
   },
   {
@@ -1851,7 +1851,7 @@ export class ProductsService {
     memory: '1.5GB RAM',
     chipset: '',
     batteryMaH: '2100mAh',
-    price: 'About 250 EUR',
+    price: ' 250 EUR',
     id: 139
   },
   {
@@ -1864,7 +1864,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 801',
     batteryMaH: '1860mAh',
-    price: 'About 450 EUR',
+    price: ' 450 EUR',
     id: 140
   },
   {
@@ -1877,7 +1877,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2300mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 141
   },
   {
@@ -1890,7 +1890,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: 'SC6815A',
     batteryMaH: '1300mAh',
-    price: 'About 120 EUR',
+    price: ' 120 EUR',
     id: 142
   },
   {
@@ -1903,7 +1903,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Snapdragon 800',
     batteryMaH: '4900mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 143
   },
   {
@@ -1916,7 +1916,7 @@ export class ProductsService {
     memory: '512MB RAM',
     chipset: '',
     batteryMaH: '1500mAh',
-    price: 'About 220 EUR',
+    price: ' 220 EUR',
     id: 144
   },
   {
@@ -1929,7 +1929,7 @@ export class ProductsService {
     memory: '3GB RAM',
     chipset: 'Snapdragon 805',
     batteryMaH: '2800mAh',
-    price: 'About 550 EUR',
+    price: ' 550 EUR',
     id: 145
   },
   {
@@ -1942,7 +1942,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: '',
     batteryMaH: '2600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 146
   },
   {
@@ -1955,7 +1955,7 @@ export class ProductsService {
     memory: '2GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2950mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 147
   },
   {
@@ -1968,7 +1968,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: 'Snapdragon 410',
     batteryMaH: '2000mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 148
   },
   {
@@ -1981,7 +1981,7 @@ export class ProductsService {
     memory: '1GB RAM',
     chipset: '',
     batteryMaH: '1800mAh',
-    price: 'About 250 EUR',
+    price: ' 250 EUR',
     id: 149
   },
   {
@@ -1994,7 +1994,7 @@ export class ProductsService {
     memory: '64MB RAM',
     chipset: '',
     batteryMaH: '1000mAh',
-    price: 'About 50 EUR',
+    price: ' 50 EUR',
     id: 150
   },
   ];
@@ -2002,11 +2002,11 @@ export class ProductsService {
   getAll() { return this.items; }
 
   getById(id) {
-	    return this.items.find(x => x.id === id);
+    return this.items.find(x => x.id === id);
 
   }
-  add(product: any){
-    const last = this.items[this.items.length-1];
+  add(product: any) {
+    const last = this.items[this.items.length - 1];
     product.id = last.id + 1;
     this.items.push(product);
   }

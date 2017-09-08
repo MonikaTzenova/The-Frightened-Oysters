@@ -1,0 +1,14 @@
+h1,
+h2,
+h3 {
+    margin: 1rem;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+button {
+    margin-bottom: 1rem;
+}

@@ -14,7 +14,7 @@ export class PromotionsService {
     memory: '3GB RAM',
     chipset: 'Exynos 7870 Octa',
     batteryMaH: '3600mAh',
-    price: 'About 300 EUR',
+    price: ' 300 EUR',
     id: 'p1'
   }, {
     image: 'http://cdn2.gsmarena.com/vv/bigpic/samsung-galaxy-j1-ace.jpg',
@@ -27,7 +27,7 @@ export class PromotionsService {
     memory: '1GB RAM',
     chipset: 'Spreadtrum SC9830',
     batteryMaH: '1850mAh',
-    price: 'About 140 EUR',
+    price: ' 140 EUR',
     id: 'p2'
   }, {
     image: 'http://cdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a9-pro1.jpg',
@@ -40,15 +40,15 @@ export class PromotionsService {
     memory: '4GB RAM',
     chipset: 'Snapdragon 652',
     batteryMaH: '5000mAh',
-    price: 'About 500 EUR',
+    price: ' 500 EUR',
     id: 'p3'
   },
   ];
 
   getAll() { return this.promotions; }
-  
-    getById(id) {
-	    return this.promotions.find(x => x.id === id);
-	}
+
+  getById(id) {
+    return this.promotions.find(x => x.id === id);
+  }
 }
 

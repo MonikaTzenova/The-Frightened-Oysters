@@ -7,6 +7,7 @@ import { UsersService } from './../../services/users.service';
 import { CookieService } from 'ng2-cookies';
 import { AuthenticationService } from './../../services/authentication.service';
 import { ProfileResolverService } from './../../services/profile-resolver.service';
+import { CartService } from '../../services/cart.service';
 
 @NgModule({})
 export class CoreModule {
@@ -21,7 +22,8 @@ export class CoreModule {
         UsersService,
         ProfileResolverService,
         LoggedGuardService,
-        PublicGuardService
+        PublicGuardService,
+        CartService
       ],
     };
   }

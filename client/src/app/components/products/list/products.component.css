@@ -22,6 +22,7 @@ h3 {
 
 button {
     align-self: bottom;
+    margin-bottom: 1rem;
 }
 
 hr {
@@ -39,4 +40,8 @@ hr {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+}
+
+a {
+    margin-bottom: 1rem;
 }
