@@ -1,0 +1,19 @@
+<div class="col-md-12">
+    <h2>My orders history</h2>
+</div>
+
+<div class="col-md-6">
+    <ul class='ordersUl'>
+        <li *ngFor="let order of ordersOdd">
+            <app-list-order-element [order]='order'></app-list-order-element>
+        </li> 
+    </ul>
+</div>
+
+<div class="col-md-6">
+    <ul class='ordersUl'>
+        <li *ngFor="let order of ordersEven">
+            <app-list-order-element [order]='order'></app-list-order-element>
+        </li> 
+    </ul>
+</div>
