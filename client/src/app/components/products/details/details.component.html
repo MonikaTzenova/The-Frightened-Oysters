@@ -1,15 +1,18 @@
 <div class="container" *ngIf="details != undefined">
-    <img src="{{details.image}}" class="centered">
+    <img src="{{details.imageUrl}}" class="centered">
     <h3 class="text-center">{{details.name}}</h3>
-    <h4 class="text-left">Size: {{details.size}}</h4>
-    <h4 class="text-left">Display size: {{details.displaySize}}</h4>
-    <h4 class="text-left">OS: {{details.os}}</h4>
-    <h4 class="text-left">Storage: {{details.storage}}</h4>
-    <h4 class="text-left">Memory : {{details.memory}}</h4>
-    <h4 class="text-left">Camera: {{details.cameraSize}}</h4>
-    <h4 class="text-left">Chipset: {{details.chipset}}</h4>
-    <h4 class="text-left">BatteryMaH: {{details.batteryMaH}}</h4>
-    <h4 class="text-left">Price: {{details.price}}</h4>
+    <h4 class="text-center">Size: {{details.size}} inches</h4>
+    <h4 class="text-center">Color: {{details.color}}</h4>
+    <h4 class="text-center">OS: {{details.os}}</h4>
+    <h4 class="text-center">Processor: {{details.processor}}</h4>
+    <h4 class="text-center">Storage: {{details.storage}} GB</h4>
+    <h4 class="text-center">Memory : {{details.memory}} GB</h4>
+    <h4 class="text-center">Camera: {{details.camera}}</h4>
+    <h4 class="text-center">Model: {{details.model}}</h4>
+    <h4 class="text-center">BatteryMaH: {{details.battery}} mAh</h4>
+    <h4 class="text-center">Price: {{details.price}}</h4>
+    <h4 class="text-center">Resolution: {{details.resolution}}</h4>
+    <h4 class="text-center">Description: {{details?.description}}</h4>
     <button class="btn btn-success btn-lg ">Add to cart</button>
 </div>
 

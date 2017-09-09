@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { AuthenticationService } from './authentication.service';
 
 import { IProduct } from './../models/IProduct';
 import { IError } from './../models/IError';
@@ -12,9 +13,9 @@ const remoteServerHost = 'http://localhost:9090/api';
 @Injectable()
 export class ProductsService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private authenticationService: AuthenticationService) { }
 
-  getAll(): Observable<any> { 
+  getAll(): Observable<any> {
     return this.http
       .get(`${remoteServerHost}/products`)
       .map(res => {
@@ -29,9 +30,19 @@ export class ProductsService {
       });
   }
 
-  getById(id) {
-    // return this.items.find(x => x.id === id);
+  getById(id): Observable<any> {
+    return this.http
+      .get(`${remoteServerHost}/products/${id}`)
+      .map(res => {
+        const parsedResponse = res.json();
 
+        if (parsedResponse.error) {
+          const errorObj = parsedResponse.error as IError;
+          throw errorObj;
+        } else {
+          return parsedResponse as IProduct;
+        }
+      });
   }
   add(product: any) {
     // const last = this.items[this.items.length - 1];

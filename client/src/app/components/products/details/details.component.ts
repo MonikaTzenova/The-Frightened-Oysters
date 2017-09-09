@@ -21,7 +21,10 @@ export class DetailsComponent implements OnInit {
 		this.promoDetails = this.promotionsService.getById(id);
 	} else {
 		const detailsId = (+this.activatedRoute.snapshot.params['id']);
-		this.details = this.productsService.getById(detailsId);
+		this.details = this.productsService.getById(detailsId)
+      .subscribe(details => {
+        this.details = details;
+      });
 	}
 
   }
