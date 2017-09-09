@@ -1,9 +1,25 @@
-<div class="col-md-6 col-md-offset-3">
+<!--<div class="container" *ngIf="details != undefined">-->
+    <!--<img src="{{details.imageUrl}}" class="centered">-->
+    <!--<h3 class="text-center">{{details.name}}</h3>-->
+    <!--<h4 class="text-center">Size: {{details.size}} inches</h4>-->
+    <!--<h4 class="text-center">Color: {{details.color}}</h4>-->
+    <!--<h4 class="text-center">OS: {{details.os}}</h4>-->
+    <!--<h4 class="text-center">Processor: {{details.processor}}</h4>-->
+    <!--<h4 class="text-center">Storage: {{details.storage}} GB</h4>-->
+    <!--<h4 class="text-center">Memory : {{details.memory}} GB</h4>-->
+    <!--<h4 class="text-center">Camera: {{details.camera}}</h4>-->
+    <!--<h4 class="text-center">Model: {{details.model}}</h4>-->
+    <!--<h4 class="text-center">BatteryMaH: {{details.battery}} mAh</h4>-->
+    <!--<h4 class="text-center">Price: {{details.price}}</h4>-->
+    <!--<h4 class="text-center">Resolution: {{details.resolution}}</h4>-->
+    <!--<h4 class="text-center">Description: {{details?.description}}</h4>-->
+    <!--<button class="btn btn-success btn-lg ">Add to cart</button>-->
+<!--</div>-->
 
-  <h2>Add Products</h2>
 
-  <form [formGroup]="addProductForm" (ngSubmit)="addProduct(addNewProduct.value)" #addNewProduct=ngForm novalidate>
+<div class="col-md-8">
 
+  <form [formGroup]="editForm" (ngSubmit)="update(updateProduct.value)" #updateProduct=ngForm novalidate>
 
     <div class="form-group">
       <label for="imageUrl" >Image*</label>
@@ -81,22 +97,14 @@
     </div>
 
     <div class="form-group">
-      <label for="color" >Price*</label>
-      <div *ngIf="color.hasError('required') && color.touched" class="validationError">Color is required</div>
-      <input type="text" class="form-control" name="color" formControlName="color"/>
-    </div>
-
-    <div class="form-group">
       <label for="description" >Description*</label>
       <div *ngIf="description.hasError('required') && description.touched" class="validationError">Description is required</div>
       <input type="text" class="form-control" name="description" formControlName="description"/>
     </div>
 
-
     <div class="form-group">
-      <input type="submit"  class="btn btn-secondary" value="Add product">
+      <input type="submit" [disabled]="!updateProduct.valid" class="btn btn-secondary" value="Update">
     </div>
 
   </form>
-
 </div>

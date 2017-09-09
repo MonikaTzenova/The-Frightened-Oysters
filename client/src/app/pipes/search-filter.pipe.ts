@@ -5,13 +5,13 @@ import { Injectable, Pipe, PipeTransform } from '@angular/core';
 @Injectable()
 export class SearchFilterPipe implements PipeTransform {
 
-  transform(items: any[], searchTerm: string): any[] {
+  transform(product: any[], searchTerm: string): any[] {
     searchTerm = searchTerm.toUpperCase();
     if (searchTerm === '') {
-      return items;
+      return product;
     }
 
-    return items.filter(item => {
+    return product.filter(item => {
       return item.name.toUpperCase().indexOf(searchTerm) !== -1;
     });
   }

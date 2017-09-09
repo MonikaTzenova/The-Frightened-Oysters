@@ -13,21 +13,26 @@ import { ICookie } from './../../models/ICookie';
   styleUrls: ['./add-edit-product.component.css']
 })
 export class AddEditProductComponent implements OnInit {
-  public size: FormControl;
-  public name: FormControl;
-  public price: FormControl;
-  public display: FormControl;
-  public storage: FormControl;
-  public memory: FormControl;
-  public photoUrl: FormControl;
-  public camera: FormControl;
-  public battery: FormControl;
+  private name: FormControl;
+  private size: FormControl;
+  private color: FormControl;
+  private os: FormControl;
+  private processor: FormControl;
+  private storage: FormControl;
+  private memory: FormControl;
+  private camera: FormControl;
+  private model: FormControl;
+  private battery: FormControl;
+  private price: FormControl;
+  private resolution: FormControl;
+  private description: FormControl;
+  private imageUrl: FormControl;
 
   public addProductForm: FormGroup;
 
 
   constructor(private router: Router, private productsService: ProductsService,  private vcRef: ViewContainerRef, public toastr: ToastsManager) {
-    this.toastr.setRootViewContainerRef(vcRef); 
+    this.toastr.setRootViewContainerRef(vcRef);
   }
 
   ngOnInit() {
@@ -35,19 +40,23 @@ export class AddEditProductComponent implements OnInit {
   }
 
   buildAddProductFormData() {
-    this.size = new FormControl('', [
-      Validators.required
-    ]);
-
     this.name  = new FormControl('', [
       Validators.required
     ]);
 
-    this.price  = new FormControl('', [
+    this.size  = new FormControl('', [
       Validators.required
     ]);
 
-    this.display  = new FormControl('', [
+    this.color  = new FormControl('', [
+      Validators.required
+    ]);
+
+    this.os  = new FormControl('', [
+      Validators.required
+    ]);
+
+    this.processor  = new FormControl('', [
       Validators.required
     ]);
 
@@ -63,25 +72,46 @@ export class AddEditProductComponent implements OnInit {
       Validators.required
     ]);
 
+    this.model  = new FormControl('', [
+      Validators.required
+    ]);
+
     this.battery  = new FormControl('', [
       Validators.required
     ]);
 
-    this.photoUrl  = new FormControl('', [
+    this.price  = new FormControl('', [
+      Validators.required
+    ]);
+
+    this.resolution  = new FormControl('', [
+      Validators.required
+    ]);
+
+    this.description  = new FormControl('', [
+      Validators.required
+    ]);
+
+    this.imageUrl  = new FormControl('', [
       Validators.required,
       Validators.pattern('https?://.+')
     ]);
 
     this.addProductForm = new FormGroup({
-      size: this.size,
       name: this.name,
-      price: this.price,
-      display: this.display,
+      size: this.size,
+      color: this.color,
+      os: this.os,
+      processor: this.processor,
       storage: this.storage,
       memory: this.memory,
-      photoUrl: this.photoUrl,
       camera: this.camera,
-      battery: this.battery
+      model: this.model,
+      battery: this.battery,
+      price: this.price,
+      resolution: this.resolution,
+      description: this.description,
+      imageUrl: this.imageUrl
     });
   }
 

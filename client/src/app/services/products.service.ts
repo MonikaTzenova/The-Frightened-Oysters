@@ -7,6 +7,7 @@ import { AuthenticationService } from './authentication.service';
 
 import { IProduct } from './../models/IProduct';
 import { IError } from './../models/IError';
+import { ICookie } from './../models/ICookie';
 
 const remoteServerHost = 'http://localhost:9090/api';
 
@@ -44,9 +45,36 @@ export class ProductsService {
         }
       });
   }
-  add(product: any) {
-    // const last = this.items[this.items.length - 1];
-    // product.id = last.id + 1;
-    // this.items.push(product);
+
+  public update(productData: IProduct, id) {
+    const headers = this.authenticationService.getAuthHeader();
+    return this.http
+      .put(`${remoteServerHost}/products/${id}`, productData, { headers })
+      .map(res => {
+        const parsedResponse = res.json();
+
+        if (parsedResponse.error) {
+          const errorObj = parsedResponse.error as IError;
+          throw errorObj;
+        } else {
+          return parsedResponse as IProduct;
+        }
+      });
+  }
+  public add(productData: IProduct): Observable<any> {
+    return this.http
+      .post(`${remoteServerHost}/products`, productData)
+      .map(res => {
+        const parsedResponse = res.json();
+
+        if (parsedResponse.error) {
+          const errorObj = parsedResponse.error as IError;
+          throw errorObj;
+        } else {
+          const result = parsedResponse as ICookie;
+          this.authenticationService.setLoginCookie(result);
+          return result;
+        }
+      });
   }
 }

@@ -16,16 +16,16 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit() {
     const id = (this.activatedRoute.snapshot.params['id']);
-	if (isNaN(id)) {
-		//const promoid = (this.activatedRoute.snapshot.params['id']);
-		this.promoDetails = this.promotionsService.getById(id);
-	} else {
-		const detailsId = (+this.activatedRoute.snapshot.params['id']);
-		this.details = this.productsService.getById(detailsId)
-      .subscribe(details => {
-        this.details = details;
-      });
-	}
+    if (isNaN(id)) {
+      //const promoid = (this.activatedRoute.snapshot.params['id']);
+      this.promoDetails = this.promotionsService.getById(id);
+    } else {
+      const detailsId = (+this.activatedRoute.snapshot.params['id']);
+      this.details = this.productsService.getById(detailsId)
+        .subscribe(details => {
+          this.details = details;
+        });
+    }
 
   }
 

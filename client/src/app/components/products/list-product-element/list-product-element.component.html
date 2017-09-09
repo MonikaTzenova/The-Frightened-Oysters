@@ -22,7 +22,8 @@
 
     <div *ngIf='showUrls' class="buttonWrap">
       <a [routerLink]="[product?.id]" class="btn btn-primary btn-sm btn-block" role="button">Details</a>
-    </div>    
+      <a *ngIf='user === product.ownerUsername' [routerLink]="['/edit', product?.id]" class="btn btn-primary btn-sm btn-block" role="button">Edit</a>
+    </div>
 
   </div>
 

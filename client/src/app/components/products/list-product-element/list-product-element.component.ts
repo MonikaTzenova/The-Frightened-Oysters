@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, AfterContentInit } from '@angular/core';
 import { IProduct } from '../../../models/IProduct';
+import { IUser } from '../../../models/IUser';
+
 
 @Component({
   selector: 'app-list-product-element',
@@ -10,7 +12,8 @@ export class ListProductElementComponent implements OnInit, AfterContentInit {
   @Input()
 
   product: IProduct;
-  
+  user: IUser;
+
   @Input()
   showUrls: boolean
 
