@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { IError } from './../models/IError';
 
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { IProduct } from './../models/IProduct';
+import { IError } from './../models/IError';
 
 const remoteServerHost = 'http://localhost:9090/api';
 
@@ -14,7 +14,7 @@ export class ProductsService {
 
   constructor(private http: Http) { }
 
-  getAll() { 
+  getAll(): Observable<any> { 
     return this.http
       .get(`${remoteServerHost}/products`)
       .map(res => {
