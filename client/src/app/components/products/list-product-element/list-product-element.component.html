@@ -1,12 +1,14 @@
 <div class='productWrap'>
 
   <div class='imageWrap'>
-    <a [routerLink]="[product?.id]"><img src={{product?.imageUrl}}></a>
+    <a *ngIf='showUrls' [routerLink]="[product?.id]"><img src={{product?.imageUrl}}></a>
+    <div *ngIf='!showUrls'><img src={{product?.imageUrl}}></div>
   </div>
 
   <div class='infoWrap'>
     <div class="title">
-      <a [routerLink]="[product?.id]">{{product?.name}}</a>
+      <a *ngIf='showUrls' [routerLink]="[product?.id]">{{product?.name}}</a>
+      <div *ngIf='!showUrls'>{{product?.name}}</div>
     </div>
 
     <ul class="productTextUl">
@@ -15,9 +17,10 @@
       <li>Processor: {{product?.processor}}</li>
       <li>Memory: {{product?.memory}}, Storage: {{product?.storage}}</li>
       <li>Price: {{product?.price}} BGN</li>
+      <li>Seller id: {{product?.ownerUsername}}</li>
     </ul>
 
-    <div class="buttonWrap">
+    <div *ngIf='showUrls' class="buttonWrap">
       <a [routerLink]="[product?.id]" class="btn btn-primary btn-sm btn-block" role="button">Details</a>
     </div>    
 
