@@ -1,12 +1,13 @@
-<div class="col-md-12"> 
-    <h2>Products</h2>
+<div class="text-center">
+    <h1>Products</h1>
+    <hr>
 </div>
 
 <div class="col-md-6">
     <ul class='productUl'>
         <li *ngFor="let productOdd of productsOdd">
             <app-list-product-element [product]='productOdd'></app-list-product-element>
-        </li> 
+        </li>
     </ul>
 </div>
 
@@ -14,6 +15,6 @@
     <ul class='productUl'>
         <li *ngFor="let productEven of productsEven">
             <app-list-product-element [product]='productEven'></app-list-product-element>
-        </li> 
+        </li>
     </ul>
 </div>
