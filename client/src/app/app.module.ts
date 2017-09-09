@@ -27,7 +27,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
-import { HistoryComponent } from './components/history/history.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
 import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
@@ -61,14 +60,11 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    // ProductsComponent,
     AddEditProductComponent,
-    HistoryComponent,
     CheckOutComponent,
     AboutComponent,
     CartComponent,
     PhonePipe,
-    // DetailsComponent,
     NotFoundComponent
   ],
   providers: [],

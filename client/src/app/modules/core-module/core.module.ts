@@ -9,6 +9,9 @@ import { AuthenticationService } from './../../services/authentication.service';
 import { ProfileResolverService } from './../../services/profile-resolver.service';
 import { ProductsResolverService } from './../../services/products-resolver.service';
 import { CartService } from '../../services/cart.service';
+import { OrdersServiceService } from '../../services/orders-service.service';
+import { OrdersResolverService } from '../../services/orders-resolver.service';
+import { HelperServiceService } from '../../services/helper-service.service';
 
 @NgModule({})
 export class CoreModule {
@@ -25,7 +28,10 @@ export class CoreModule {
         ProductsResolverService,
         LoggedGuardService,
         PublicGuardService,
-        CartService
+        CartService,
+        OrdersServiceService,
+        OrdersResolverService,
+        HelperServiceService
       ],
     };
   }
