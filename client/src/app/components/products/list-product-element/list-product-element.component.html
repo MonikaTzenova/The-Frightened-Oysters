@@ -1,32 +1,32 @@
 <div class='productWrap'>
 
-  <div class='imageWrap'>
-    <a *ngIf='showUrls' [routerLink]="[product?.id]"><img src={{product?.imageUrl}}></a>
-    <div *ngIf='!showUrls'><img src={{product?.imageUrl}}></div>
-  </div>
-
-  <div class='infoWrap'>
-    <div class="title">
-      <a *ngIf='showUrls' [routerLink]="[product?.id]">{{product?.name}}</a>
-      <div *ngIf='!showUrls'>{{product?.name}}</div>
+    <div class='imageWrap'>
+        <a *ngIf='showUrls' [routerLink]="[product?.id]"><img src={{product?.imageUrl}}></a>
+        <div *ngIf='!showUrls'><img src={{product?.imageUrl}}></div>
     </div>
 
-    <ul class="productTextUl">
-      <li>{{product?.model}} {{product?.brand}} ({{product?.year}})</li>
-      <li>OS: {{product?.os}}</li>
-      <li>Processor: {{product?.processor}}</li>
-      <li>Memory: {{product?.memory}}, Storage: {{product?.storage}}</li>
-      <li>Price: {{product?.price}} BGN</li>
-      <li>Seller id: {{product?.ownerUsername}}</li>
-    </ul>
+    <div class='infoWrap'>
+        <div class="title">
+            <a *ngIf='showUrls' [routerLink]="[product?.id]">{{product?.brand}} {{product?.model}} ({{product?.year}})</a>
+            <div *ngIf='!showUrls'>{{product?.brand}} {{product?.model}} ({{product?.year}}) </div>
+        </div>
 
-    <div *ngIf='showUrls' class="buttonWrap">
-      <a [routerLink]="[product?.id]" class="btn btn-default btn-sm btn-block" role="button">Details</a>
-      <div *ngIf="!remoteFromCartButton" class="btn btn-success btn-sm btn-block" (click)="addProductToCart()">Add to cart</div>
-      <div *ngIf="remoteFromCartButton" class="btn btn-danger btn-sm btn-block" (click)="removeProductFromCart()">Remove from cart</div>
-      <a *ngIf='user === product.ownerUsername' [routerLink]="['/edit', product?.id]" class="btn btn-primary btn-sm btn-block" role="button">Edit</a>
+        <ul class="productTextUl">
+            <li>Description: {{product?.description}} </li>
+            <li>OS: {{product?.os}}</li>
+            <li>Processor: {{product?.processor}}</li>
+            <li>Memory: {{product?.memory}}, Storage: {{product?.storage}}</li>
+            <li>Price: {{product?.price}} BGN</li>
+            <li>Seller username: {{product?.ownerUsername}}</li>
+        </ul>
+
+        <div *ngIf='showUrls' class="buttonWrap">
+            <a [routerLink]="[product?.id]" class="btn btn-default btn-sm btn-block" role="button">Details</a>
+            <div *ngIf="!remoteFromCartButton" class="btn btn-success btn-sm btn-block" (click)="addProductToCart()">Add to cart</div>
+            <div *ngIf="remoteFromCartButton" class="btn btn-danger btn-sm btn-block" (click)="removeProductFromCart()">Remove from cart</div>
+            <a *ngIf='user === product.ownerUsername' [routerLink]="['/edit', product?.id]" class="btn btn-primary btn-sm btn-block" role="button">Edit</a>
+        </div>
+
     </div>
-
-  </div>
 
 </div>

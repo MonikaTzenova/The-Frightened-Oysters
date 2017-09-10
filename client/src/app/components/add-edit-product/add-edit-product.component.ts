@@ -112,7 +112,7 @@ export class AddEditProductComponent implements OnInit {
     ]);
 
     this.addProductForm = new FormGroup({
-      name: this.name,
+      // name: this.name,
       size: this.size,
       color: this.color,
       os: this.os,
@@ -125,8 +125,8 @@ export class AddEditProductComponent implements OnInit {
       price: this.price,
       resolution: this.resolution,
       description: this.description,
-      year: this.resolution,
-      brand: this.description,
+      year: this.year,
+      brand: this.brand,
       imageUrl: this.imageUrl
     });
   }

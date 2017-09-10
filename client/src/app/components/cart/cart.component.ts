@@ -29,7 +29,7 @@ export class CartComponent implements OnInit {
     this.cartProductsOdd = [];
     this.helperServiceService.buildOddAndEvenElements(this.cartProducts, this.cartProductsOdd, this.cartProductsEven);
     this.totalPrice = this.cartProducts.reduce((prevValue: number, currentValue: IProduct) => {
-      return prevValue + currentValue.price;
+      return prevValue + +currentValue.price;
     }, 0);
   }
 

@@ -16,3 +16,7 @@ ul.cartProductsUl {
 .col-md-12 {
     padding: 0;
 }
+
+.summaryWrap {
+    padding-right: 1rem;
+}
