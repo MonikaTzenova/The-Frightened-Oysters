@@ -8,7 +8,7 @@
     <div class='infoWrap'>
         <div class="title">
             <a *ngIf='showUrls' [routerLink]="[product?.id]">{{product?.brand}} {{product?.model}} ({{product?.year}})</a>
-            <div *ngIf='!showUrls'>{{product?.name}} </div>
+            <div *ngIf='!showUrls'>{{product?.brand}} {{product?.model}} ({{product?.year}}) </div>
         </div>
 
         <ul class="productTextUl">
