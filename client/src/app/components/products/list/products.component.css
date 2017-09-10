@@ -8,3 +8,7 @@
     padding: 20px 0;
     border-bottom: 1px dashed #ccc;
 }
+
+.col-md-12 {
+    padding: 0;
+}
