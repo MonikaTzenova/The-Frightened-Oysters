@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { CookieService } from 'ng2-cookies';
 
 import { Http } from '@angular/http';
@@ -15,7 +15,10 @@ const remoteServerHost = 'http://localhost:9090/api/orders';
 
 @Injectable()
 export class CartService {
-  constructor(private http: Http, private cookieService: CookieService) { }
+  public cartUpdateEvent: EventEmitter<number>;
+  constructor(private http: Http, private cookieService: CookieService) {
+    this.cartUpdateEvent = new EventEmitter();
+  }
 
   public getProducts() {
     const currentCartProductsAsString = this.cookieService.get(cartCookieKey);
@@ -44,6 +47,7 @@ export class CartService {
   private updateCardCookie(cartProducts: IProduct[]) {
     const tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
     this.cookieService.set(cartCookieKey, JSON.stringify(cartProducts), tomorrow, cartCookiePath);
+    this.cartUpdateEvent.emit(cartProducts.length);
   }
 
   public placeOrder(order: ICheckOut): Observable<any> {
