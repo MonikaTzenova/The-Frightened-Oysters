@@ -1,8 +1,8 @@
 <div class='orderWrap'>
 
     <div class="title">
-        <a *ngIf='showUrls' [routerLink]="[order?.id]">{{order?.dateCreated | date}}</a>
-        <div *ngIf='!showUrls'>{{order?.dateCreated | date}}</div>
+        <a *ngIf='showUrls' [routerLink]="[order?.id]">{{order?.dateCreated | date:'medium'}}</a>
+        <div *ngIf='!showUrls'>{{order?.dateCreated | date:'medium'}}</div>
     </div>
 
     <div class='orderInfoBox'>Price: {{order?.price}} BGN</div>
