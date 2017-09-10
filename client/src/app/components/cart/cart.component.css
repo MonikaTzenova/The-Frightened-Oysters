@@ -1,14 +1,11 @@
-h1,
-h2,
-h3 {
-    margin: 1rem;
+ul.cartProductsUl {
+    list-style-type: none;
+}
+.removeBtn {
+    margin-top: 10px;
 }
 
-img {
-    display: block;
-    margin: auto;
-}
-
-button {
-    margin-bottom: 1rem;
+.cartProductsUl li {
+    padding: 20px 0;
+    border-bottom: 1px dashed #ccc;
 }
