@@ -26,6 +26,8 @@ export class AddEditProductComponent implements OnInit {
   private price: FormControl;
   private resolution: FormControl;
   private description: FormControl;
+  private year: FormControl;
+  private brand: FormControl;
   private imageUrl: FormControl;
 
   public addProductForm: FormGroup;
@@ -96,6 +98,14 @@ export class AddEditProductComponent implements OnInit {
       Validators.required
     ]);
 
+    this.year  = new FormControl('', [
+      Validators.required
+    ]);
+
+    this.brand  = new FormControl('', [
+      Validators.required
+    ]);
+
     this.imageUrl  = new FormControl('', [
       Validators.required,
       Validators.pattern('https?://.+')
@@ -115,6 +125,8 @@ export class AddEditProductComponent implements OnInit {
       price: this.price,
       resolution: this.resolution,
       description: this.description,
+      year: this.resolution,
+      brand: this.description,
       imageUrl: this.imageUrl
     });
   }
@@ -124,7 +136,8 @@ export class AddEditProductComponent implements OnInit {
       this.router.navigate(['products'], { queryParams: { 'refresh': 1 } });
     };
 
-    this.productsService.add(productData);
+    this.productsService.add(productData)
+      .subscribe(handleSuccessResponse);
     this.toastr.success('Product added successfully')
 
   }

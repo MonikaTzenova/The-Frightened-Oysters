@@ -62,17 +62,30 @@
             <input type="text" class="form-control" name="price" formControlName="price" />
         </div>
         <div class="form-group">
-            <label for="color">Price*</label>
+            <label for="color">Color*</label>
             <div *ngIf="color.hasError('required') && color.touched" class="validationError">Color is required</div>
             <input type="text" class="form-control" name="color" formControlName="color" />
         </div>
+
+        <div class="form-group">
+          <label for="color">Year*</label>
+          <div *ngIf="year.hasError('required') && year.touched" class="validationError">Year is required</div>
+          <input type="text" class="form-control" name="year" formControlName="year" />
+        </div>
+
+        <div class="form-group">
+          <label for="brand">Brand*</label>
+          <div *ngIf="brand.hasError('required') && brand.touched" class="validationError">Brand is required</div>
+          <input type="text" class="form-control" name="brand" formControlName="brand" />
+        </div>
+
         <div class="form-group">
             <label for="description">Description*</label>
             <div *ngIf="description.hasError('required') && description.touched" class="validationError">Description is required</div>
             <input type="text" class="form-control" name="description" formControlName="description" />
         </div>
         <div class="form-group">
-            <input type="submit" class="btn btn-secondary" value="Add product">
+            <input type="submit" class="btn btn-secondary" [disabled]="!addNewProduct.valid" value="Add product">
         </div>
     </form>
 </div>

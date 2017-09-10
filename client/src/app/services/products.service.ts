@@ -62,8 +62,9 @@ export class ProductsService {
       });
   }
   public add(productData: IProduct): Observable<any> {
+    const headers = this.authenticationService.getAuthHeader();
     return this.http
-      .post(`${remoteServerHost}/products`, productData)
+      .post(`${remoteServerHost}/products`, productData,  { headers })
       .map(res => {
         const parsedResponse = res.json();
 
