@@ -29,7 +29,6 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
     this.products = this.activateRoute.snapshot.data['products'];
-    console.log(this.products);
     this.helperServiceService.buildOddAndEvenElements(this.products, this.productsOdd, this.productsEven);
     this.cartProducts = this.cartService.getProducts();
   }
