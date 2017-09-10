@@ -1,5 +1,5 @@
 import { ICookie } from './../models/ICookie';
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { CookieService } from 'ng2-cookies';
 import { Headers } from '@angular/http';
 
@@ -8,8 +8,11 @@ const authCookiePath = '/';
 
 @Injectable()
 export class AuthenticationService {
+  public userLoggedEvent: EventEmitter<boolean>;
 
-  constructor(private cookieService: CookieService) { }
+  constructor(private cookieService: CookieService) {
+    this.userLoggedEvent = new EventEmitter();
+  }
 
   public isUserLogged(): boolean {
     const authCookie = this.cookieService.get(authCookieKey);
@@ -31,10 +34,12 @@ export class AuthenticationService {
   public setLoginCookie(cookie: ICookie) {
     const expireDate = new Date(cookie.cookieExpirationTime);
     this.cookieService.set(authCookieKey, cookie.cookie, expireDate, authCookiePath);
+    this.userLoggedEvent.emit(true);
   }
 
   public deleteLoginCookie() {
     this.cookieService.delete(authCookieKey, authCookiePath);
+    this.userLoggedEvent.emit(true);
   }
 
 }
