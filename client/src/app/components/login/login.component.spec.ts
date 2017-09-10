@@ -42,14 +42,14 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have h2 tag', () => {
-    const debugH2Element = fixture.debugElement.query(By.css('h2'));
+  it('should have h1 tag', () => {
+    const debugH2Element = fixture.debugElement.query(By.css('h1'));
     const htmlH2Element = debugH2Element.nativeElement;
     expect(htmlH2Element).toBeTruthy();
   });
 
-  it('should have h2 text correct', () => {
-    const debugH2Element = fixture.debugElement.query(By.css('h2'));
+  it('should have h1 text correct', () => {
+    const debugH2Element = fixture.debugElement.query(By.css('h1'));
     const htmlH2Element = debugH2Element.nativeElement;
     expect(htmlH2Element.textContent).toEqual(h2Content);
   });
