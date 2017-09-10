@@ -1,11 +1,7 @@
 <carousel>
-<!-- <button class="btn btn-default" (click)="showSuccess()">Toastr Tester</button> -->
-    <h1 class="text-center">Promotions</h1>
+    <h1 class="text-center">Our latest products</h1>
     <slide *ngFor="let item of promotions">
-        <img src="{{item.image}}">
-        <div class="carousel-caption">
-            <h3>{{item.name}} </h3>
-            <a [routerLink]="[item.id]" class="btn btn-link btn-lg" role="button">Details</a>
-        </div>
+        <img src="{{item.image}}" [routerLink]="['/products']">
+        <h3>{{item.name}} </h3>
     </slide>
 </carousel>

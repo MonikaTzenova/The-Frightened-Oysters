@@ -36,9 +36,4 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['home']);
     }
   }
-
-// Simple toastr
-//    showSuccess() {
-//        this.toastr.success('You are awesome!', 'Success!');
-//    }
 }
