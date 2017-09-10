@@ -22,6 +22,7 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
     this.checkUserAuthentication();
+    this.cartProductsCounter = this.cartService.getProducts().length;
   }
 
   checkUserAuthentication() {
