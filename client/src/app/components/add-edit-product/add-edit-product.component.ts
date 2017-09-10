@@ -31,7 +31,11 @@ export class AddEditProductComponent implements OnInit {
   public addProductForm: FormGroup;
 
 
-  constructor(private router: Router, private productsService: ProductsService,  private vcRef: ViewContainerRef, public toastr: ToastsManager) {
+  constructor(
+    private router: Router,
+    private productsService: ProductsService,
+    private vcRef: ViewContainerRef,
+    public toastr: ToastsManager) {
     this.toastr.setRootViewContainerRef(vcRef);
   }
 
