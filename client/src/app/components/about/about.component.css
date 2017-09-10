@@ -2,20 +2,21 @@
     size: 10rem;
 }
 
+.block {
+    border-bottom: 0.2rem solid #ccc;
+}
+
 img {
     width: 20rem;
+    margin-bottom: 2rem;
 }
 
 img:hover {
-    background-color: #aaa2a2;
+    background-color: #ccc;
 }
 
 div {
     width: 100%;
-}
-
-hr {
-    border: 1px solid grey;
 }
 
 h1 {
