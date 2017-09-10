@@ -83,7 +83,7 @@ export class SignUpComponent implements OnInit {
 
   register(userData: IUser) {
     const handleSuccessResponse = (cookie: ICookie) => {
-      this.router.navigate(['profile'], { queryParams: { 'refresh': 1 } });
+      this.router.navigate(['home'], { queryParams: { 'refresh': 1 } });
       this.toastr.success('Registration successfull');
     };
 
