@@ -1,6 +1,7 @@
 ul.cartProductsUl {
     list-style-type: none;
 }
+
 .removeBtn {
     margin-top: 10px;
 }
@@ -8,4 +9,8 @@ ul.cartProductsUl {
 .cartProductsUl li {
     padding: 20px 0;
     border-bottom: 1px dashed #ccc;
+}
+
+.col-md-12 {
+    padding: 0;
 }
