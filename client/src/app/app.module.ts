@@ -19,17 +19,12 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
 import { ProductsModule } from './modules/products/products.module';
 import { ModalModule } from 'ngx-bootstrap';
 
-// Pipes
-import { PhonePipe } from './pipes/phone-pipe';
-
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
-import { CheckOutComponent } from './components/check-out/check-out.component';
 import { AboutComponent } from './components/about/about.component';
-import { CartComponent } from './components/cart/cart.component';
 import { CoreModule } from './modules/core-module/core.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { DetailsComponent } from './components/products/details/details.component';
@@ -61,10 +56,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     HomeComponent,
     ProfileComponent,
     AddEditProductComponent,
-    CheckOutComponent,
     AboutComponent,
-    CartComponent,
-    PhonePipe,
     NotFoundComponent
   ],
   providers: [],

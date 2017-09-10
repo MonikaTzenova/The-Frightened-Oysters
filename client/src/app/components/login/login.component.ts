@@ -1,4 +1,3 @@
-import { IError } from './../../models/IError';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UsersService } from './../../services/users.service';
@@ -6,6 +5,7 @@ import { Router } from '@angular/router';
 
 import { ICookie } from './../../models/ICookie';
 import { ILoginUser } from './../../models/ILoginUser';
+import { IError } from './../../models/IError';
 
 @Component({
   selector: 'app-login',

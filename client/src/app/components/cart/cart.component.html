@@ -1,8 +1,19 @@
-<h1>Your products</h1>
-<div *ngFor="let item of cartItems">
-    <img src="{{item.image}}" class="centered">
-    <h2 class="text-center">{{item.name}}</h2>
-    <h3 class="text-center">{{item.price}}</h3>
-    <button class="btn btn-danger btn-lg btn-block" name="{{item.id}}" (click)="removePromoFromCart(removePromoBtn)" #removePromoBtn>Remove</button>
-    <button class="btn btn-success btn-lg btn-block">Order now</button>
-</div>
+<div class="col-md-12">
+
+    <h1>Cart products</h1>
+
+    <p *ngIf="totalPrice === 0">Your cart is empty. Please add first product.</p>
+
+    <ul class="cartProductsUl list-group row">
+        <li *ngFor="let product of cartProducts" class="col-xs-4">
+            <app-list-product-element [product]='product' [showUrls]=false></app-list-product-element>
+            <button class="btn btn-danger btn-sm removeBtn" (click)="removeProduct(product)">Remove</button>
+        </li>
+    </ul>
+    
+    <div class="summaryWrap">
+        <div class="sumWrap">Total price: {{totalPrice}} BGN</div>
+        <a *ngIf="totalPrice !== 0" [routerLink]="['/cart/check-out']" class="btn btn-success btn-md">Proceed to check out</a>
+    </div>
+    
+<div>

@@ -7,14 +7,13 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { ProductsModule } from './modules/products/products.module';
 import { OrdersModule } from './modules/orders/orders.module';
+import { CartModule } from './modules/cart/cart.module';
 
 // Components
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
-import { CheckOutComponent } from './components/check-out/check-out.component';
 import { AboutComponent } from './components/about/about.component';
-import { CartComponent } from './components/cart/cart.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const appRoutes: Routes = [
@@ -35,9 +34,10 @@ const appRoutes: Routes = [
     // Orders
     { path: 'orders', loadChildren: './modules/orders/orders.module#OrdersModule' },
 
-    { path: 'check-out', component: CheckOutComponent },
+    // Cart
+    { path: 'cart', loadChildren: './modules/cart/cart.module#CartModule' },
+
     { path: 'about', component: AboutComponent },
-    { path: 'cart', component: CartComponent },
 
     { path: '*', component: NotFoundComponent }
 ];
