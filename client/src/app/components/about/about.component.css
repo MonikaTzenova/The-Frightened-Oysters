@@ -17,3 +17,7 @@ div {
 hr {
     border: 1px solid grey;
 }
+
+h1 {
+    border: 0;
+}
