@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
   login(userData: ILoginUser) {
     const handleSuccessResponse = (cookie: ICookie) => {
       this.errorMessage = undefined;
-      this.router.navigate(['home'], { queryParams: { 'refresh': 1 } });
+      this.router.navigate(['profile'], { queryParams: { 'refresh': 1 } });
     };
     const handleError = (error: IError) => {
       this.errorMessage = error.message;
