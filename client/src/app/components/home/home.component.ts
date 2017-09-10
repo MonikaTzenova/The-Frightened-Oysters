@@ -25,15 +25,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.checkForForceRefresh();
     this.promotions = this.promotionsService.getAll();
-  }
-
-  checkForForceRefresh() {
-    const forceRefresh = this.activatedRoute.snapshot.queryParams['refresh'];
-    if (forceRefresh) {
-      location.reload();
-      this.router.navigate(['home']);
-    }
   }
 }

@@ -14,7 +14,7 @@ export class LogoutComponent implements OnInit {
 
   ngOnInit() {
     const handleSuccessResponse = () => {
-      this.router.navigate(['home'], { queryParams: { 'refresh': 1 } });
+      this.router.navigate(['home']);
     };
     const handleError = (errorMessage: string) => {
       this.errorMessage = errorMessage;
