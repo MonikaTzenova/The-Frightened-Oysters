@@ -35,7 +35,7 @@ export class CheckOutComponent implements OnInit {
   fetchCartProducts() {
     this.cartProducts = this.cartService.getProducts();
     this.totalPrice = this.cartProducts.reduce((prevValue: number, currentValue: IProduct) => {
-      return prevValue + currentValue.price;
+      return prevValue + +currentValue.price;
     }, 0);
   }
 
@@ -46,7 +46,7 @@ export class CheckOutComponent implements OnInit {
       Validators.maxLength(150)
     ]);
 
-    this.phone  = new FormControl('', [
+    this.phone = new FormControl('', [
       Validators.required
     ]);
 
@@ -56,7 +56,7 @@ export class CheckOutComponent implements OnInit {
       Validators.maxLength(150)
     ]);
 
-    this.email  = new FormControl('', [
+    this.email = new FormControl('', [
       Validators.required,
       Validators.email
     ]);
