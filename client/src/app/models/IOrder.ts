@@ -8,5 +8,6 @@ export interface IOrder {
     name: string;
     payment: string;
     phone: string;
+    dateCreated: string;
     products: IProduct[];
 }

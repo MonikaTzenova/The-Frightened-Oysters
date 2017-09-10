@@ -40,6 +40,7 @@ const create = function(order) {
                     newOrderId = lastAddedOrder.id + 1;
                 }
                 order.id = newOrderId;
+                order.dateCreated = new Date();
 
                 return productStorage.fetch();
             })
@@ -139,6 +140,7 @@ const parseUserOrder = (order, productObj) => {
         name: order.name,
         payment: order.payment,
         phone: order.phone,
+        dateCreated: order.dateCreated,
         products: productObj.products
     };
 };
