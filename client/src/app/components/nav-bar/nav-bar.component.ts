@@ -9,9 +9,17 @@ import { AuthenticationService } from './../../services/authentication.service';
 export class NavBarComponent implements OnInit {
   private isUserLogged = false;
 
-  constructor(private authenticationService: AuthenticationService) { }
+  constructor(private authenticationService: AuthenticationService) {
+    authenticationService.userLoggedEvent.subscribe(userLogged => {
+      this.checkUserAuthentication();
+    });
+  }
 
   ngOnInit() {
+    this.checkUserAuthentication();
+  }
+
+  checkUserAuthentication() {
     this.isUserLogged = this.authenticationService.isUserLogged();
   }
 
