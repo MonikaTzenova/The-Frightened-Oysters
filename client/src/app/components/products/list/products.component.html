@@ -1,20 +1,11 @@
-<div class="text-center">
+<div class="col-md-12">
+
     <h1>Products</h1>
-    <hr>
-</div>
 
-<div class="col-md-6">
-    <ul class='productUl'>
-        <li *ngFor="let productOdd of productsOdd">
-            <app-list-product-element [product]='productOdd'></app-list-product-element>
+    <ul class="productUl list-group row">
+        <li *ngFor="let product of products" class="col-xs-4">
+            <app-list-product-element [product]='product' [cartProducts]='cartProducts'></app-list-product-element>
         </li>
     </ul>
-</div>
-
-<div class="col-md-6">
-    <ul class='productUl'>
-        <li *ngFor="let productEven of productsEven">
-            <app-list-product-element [product]='productEven'></app-list-product-element>
-        </li>
-    </ul>
-</div>
+    
+<div>
