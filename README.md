@@ -6,10 +6,10 @@ Shop and Sell phones.
 
 
 ## Run the app
-Clone or download the repository
-Go in client folder, start CLI and write: npm install
-Go in server folder, start CLI and write: npm start
-Go in client folder, start CLI and write: npm start
+* Clone or download the repository
+* Go in client folder, start CLI and write: npm install
+* Go in server folder, start CLI and write: npm start
+* Go in client folder, start CLI and write: npm start
 
 
 ## Team members
