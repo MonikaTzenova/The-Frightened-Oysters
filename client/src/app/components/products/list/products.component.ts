@@ -18,13 +18,11 @@ export class ProductsComponent implements OnInit {
   public productsOdd: IProduct[];
   public productsEven: IProduct[];
   public cartProducts: IProduct[];
-  public user: IUser;
 
   constructor(
     private activateRoute: ActivatedRoute,
     private cartService: CartService,
-    private helperServiceService: HelperServiceService,
-    private userService: UsersService
+    private helperServiceService: HelperServiceService
   ) {
     this.productsOdd = [];
     this.productsEven = [];
@@ -34,10 +32,5 @@ export class ProductsComponent implements OnInit {
     this.products = this.activateRoute.snapshot.data['products'];
     this.helperServiceService.buildOddAndEvenElements(this.products, this.productsOdd, this.productsEven);
     this.cartProducts = this.cartService.getProducts();
-
-    this.userService.getLogged()
-      .subscribe(user => {
-        this.user = user;
-      });
   }
 }
