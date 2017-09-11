@@ -14,10 +14,10 @@ import { IUser } from '../../../models/IUser';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  private products: IProduct[];
-  private productsOdd: IProduct[];
-  private productsEven: IProduct[];
-  private cartProducts: IProduct[];
+  public products: IProduct[];
+  public productsOdd: IProduct[];
+  public productsEven: IProduct[];
+  public cartProducts: IProduct[];
   public user: IUser;
 
   constructor(

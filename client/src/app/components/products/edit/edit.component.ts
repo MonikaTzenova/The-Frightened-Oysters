@@ -13,25 +13,25 @@ import { IProduct } from '../../../models/IProduct';
 export class EditProductComponent implements OnInit {
   product: IProduct;
 
-  private name: FormControl;
-  private size: FormControl;
-  private color: FormControl;
-  private os: FormControl;
-  private processor: FormControl;
-  private storage: FormControl;
-  private memory: FormControl;
-  private camera: FormControl;
-  private model: FormControl;
-  private battery: FormControl;
-  private price: FormControl;
-  private resolution: FormControl;
-  private description: FormControl;
-  private imageUrl: FormControl;
+  public name: FormControl;
+  public size: FormControl;
+  public color: FormControl;
+  public os: FormControl;
+  public processor: FormControl;
+  public storage: FormControl;
+  public memory: FormControl;
+  public camera: FormControl;
+  public model: FormControl;
+  public battery: FormControl;
+  public price: FormControl;
+  public resolution: FormControl;
+  public description: FormControl;
+  public imageUrl: FormControl;
 
-  private editForm: FormGroup;
+  public editForm: FormGroup;
 
-  private errorMessage: string;
-  private successMessage: string;
+  public errorMessage: string;
+  public successMessage: string;
 
   constructor(private activateRoute: ActivatedRoute, private productsService: ProductsService) { }
 

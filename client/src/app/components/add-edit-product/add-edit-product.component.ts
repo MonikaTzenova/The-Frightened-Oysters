@@ -13,22 +13,22 @@ import { ICookie } from './../../models/ICookie';
   styleUrls: ['./add-edit-product.component.css']
 })
 export class AddEditProductComponent implements OnInit {
-  private name: FormControl;
-  private size: FormControl;
-  private color: FormControl;
-  private os: FormControl;
-  private processor: FormControl;
-  private storage: FormControl;
-  private memory: FormControl;
-  private camera: FormControl;
-  private model: FormControl;
-  private battery: FormControl;
-  private price: FormControl;
-  private resolution: FormControl;
-  private description: FormControl;
-  private year: FormControl;
-  private brand: FormControl;
-  private imageUrl: FormControl;
+  public name: FormControl;
+  public size: FormControl;
+  public color: FormControl;
+  public os: FormControl;
+  public processor: FormControl;
+  public storage: FormControl;
+  public memory: FormControl;
+  public camera: FormControl;
+  public model: FormControl;
+  public battery: FormControl;
+  public price: FormControl;
+  public resolution: FormControl;
+  public description: FormControl;
+  public year: FormControl;
+  public brand: FormControl;
+  public imageUrl: FormControl;
 
   public addProductForm: FormGroup;
 
@@ -138,7 +138,7 @@ export class AddEditProductComponent implements OnInit {
 
     this.productsService.add(productData)
       .subscribe(handleSuccessResponse);
-    this.toastr.success('Product added successfully')
+    this.toastr.success('Product added successfully');
 
   }
 }

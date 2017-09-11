@@ -11,7 +11,7 @@ export class ListOrderElementComponent implements OnInit, AfterContentInit {
   order: IOrder;
 
   @Input()
-  showUrls: boolean
+  showUrls: boolean;
 
   constructor() { }
 

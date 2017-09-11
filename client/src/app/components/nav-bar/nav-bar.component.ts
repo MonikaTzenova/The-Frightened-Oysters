@@ -9,7 +9,7 @@ import { CartService } from './../../services/cart.service';
 })
 export class NavBarComponent implements OnInit {
   cartProductsCounter = 0;
-  private isUserLogged = false;
+  public isUserLogged = false;
 
   constructor(private authenticationService: AuthenticationService, private cartService: CartService) {
     authenticationService.userLoggedEvent.subscribe(userLogged => {

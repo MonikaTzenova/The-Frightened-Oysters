@@ -12,15 +12,15 @@ import { IUser } from './../../models/IUser';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  private username: FormControl;
-  private password: FormControl;
-  private company: FormControl;
-  private phone: FormControl;
-  private address: FormControl;
-  private email: FormControl;
-  private avatarUrl: FormControl;
+  public username: FormControl;
+  public password: FormControl;
+  public company: FormControl;
+  public phone: FormControl;
+  public address: FormControl;
+  public email: FormControl;
+  public avatarUrl: FormControl;
 
-  private registerForm: FormGroup;
+  public registerForm: FormGroup;
 
   constructor(private router: Router, private userService: UsersService) { }
 

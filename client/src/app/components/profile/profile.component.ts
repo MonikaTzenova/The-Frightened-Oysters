@@ -13,18 +13,18 @@ import { IUser } from './../../models/IUser';
 export class ProfileComponent implements OnInit {
   user: IUser;
 
-  private username: FormControl;
-  private newPassword: FormControl;
-  private company: FormControl;
-  private phone: FormControl;
-  private address: FormControl;
-  private email: FormControl;
-  private avatarUrl: FormControl;
+  public username: FormControl;
+  public newPassword: FormControl;
+  public company: FormControl;
+  public phone: FormControl;
+  public address: FormControl;
+  public email: FormControl;
+  public avatarUrl: FormControl;
 
-  private profileForm: FormGroup;
+  public profileForm: FormGroup;
 
-  private errorMessage: string;
-  private successMessage: string;
+  public errorMessage: string;
+  public successMessage: string;
 
   constructor(private activateRoute: ActivatedRoute, private userService: UsersService) { }
 

@@ -13,12 +13,12 @@ import { IError } from './../../models/IError';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  private errorMessage: string;
+  public errorMessage: string;
 
-  private username: FormControl;
-  private password: FormControl;
+  public username: FormControl;
+  public password: FormControl;
 
-  private loginForm: FormGroup;
+  public loginForm: FormGroup;
 
   constructor(private router: Router, private userService: UsersService) { }
 

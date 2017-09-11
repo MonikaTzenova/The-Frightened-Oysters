@@ -10,9 +10,9 @@ import { IOrder } from '../../../../models/IOrder';
   styleUrls: ['./list.component.css']
 })
 export class OordersListComponent implements OnInit {
-  private orders: IOrder[];
-  private ordersOdd: IOrder[];
-  private ordersEven: IOrder[];
+  public orders: IOrder[];
+  public ordersOdd: IOrder[];
+  public ordersEven: IOrder[];
 
   constructor(private activateRoute: ActivatedRoute, private helperServiceService: HelperServiceService) {
     this.ordersEven = [];

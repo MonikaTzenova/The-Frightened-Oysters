@@ -15,7 +15,7 @@ export class OrdersServiceService {
 
   constructor(private http: Http, private authenticationService: AuthenticationService) { }
 
-  getAll(): Observable<any> { 
+  getAll(): Observable<any> {
     const headers = this.authenticationService.getAuthHeader();
     return this.http
       .get(remoteServerHost, { headers })

@@ -10,14 +10,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   public details; public promoDetails;
-  constructor( @Inject(ProductsService) private productsService,  private activatedRoute: ActivatedRoute, @Inject(PromotionsService) private promotionsService,) {
-
+  constructor(
+    @Inject(ProductsService) private productsService,
+    private activatedRoute: ActivatedRoute,
+    @Inject(PromotionsService) private promotionsService) {
   }
 
   ngOnInit() {
     const id = (this.activatedRoute.snapshot.params['id']);
     if (isNaN(id)) {
-      //const promoid = (this.activatedRoute.snapshot.params['id']);
+      // const promoid = (this.activatedRoute.snapshot.params['id']);
       this.promoDetails = this.promotionsService.getById(id);
     } else {
       const detailsId = (+this.activatedRoute.snapshot.params['id']);

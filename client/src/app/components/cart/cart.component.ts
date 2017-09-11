@@ -10,10 +10,10 @@ import { IProduct } from './../../models/IProduct';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  private cartProducts: IProduct[];
-  private cartProductsOdd: IProduct[];
-  private cartProductsEven: IProduct[];
-  private totalPrice = 0;
+  public cartProducts: IProduct[];
+  public cartProductsOdd: IProduct[];
+  public cartProductsEven: IProduct[];
+  public totalPrice = 0;
   constructor(private cartService: CartService, private helperServiceService: HelperServiceService) {
     this.cartProductsOdd = [];
     this.cartProductsEven = [];
@@ -33,7 +33,7 @@ export class CartComponent implements OnInit {
     }, 0);
   }
 
-  private removeProduct(product: IProduct) {
+  public removeProduct(product: IProduct) {
     this.cartService.removeProduct(product);
     this.fetchCartProducts();
   }

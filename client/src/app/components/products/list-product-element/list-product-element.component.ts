@@ -10,13 +10,13 @@ import { IProduct } from '../../../models/IProduct';
 })
 export class ListProductElementComponent implements OnInit, AfterContentInit {
   @Input()
-  private product: IProduct;
+  public product: IProduct;
 
   @Input()
-  private showUrls: boolean;
+  public showUrls: boolean;
   @Input()
-  private cartProducts: IProduct[];
-  private remoteFromCartButton = false;
+  public cartProducts: IProduct[];
+  public remoteFromCartButton = false;
 
   constructor(private cartService: CartService) { }
 

@@ -13,17 +13,17 @@ import { ICheckOut } from './../../models/ICheckOut';
   styleUrls: ['./check-out.component.css']
 })
 export class CheckOutComponent implements OnInit {
-  private errorMessage: string;
-  private cartProducts: IProduct[];
-  private totalPrice = 0;
+  public errorMessage: string;
+  public cartProducts: IProduct[];
+  public totalPrice = 0;
 
   // Form field
-  private name: FormControl;
-  private phone: FormControl;
-  private address: FormControl;
-  private email: FormControl;
+  public name: FormControl;
+  public phone: FormControl;
+  public address: FormControl;
+  public email: FormControl;
 
-  private checkOutForm: FormGroup;
+  public checkOutForm: FormGroup;
 
   constructor(private router: Router, private cartService: CartService) { }
 

@@ -12,9 +12,9 @@ import { IProduct } from '../../../../models/IProduct';
   styleUrls: ['./details.component.css']
 })
 export class OrderDetailsComponent implements OnInit {
-  private order: IOrder;
-  private productsOdd: IProduct[]
-  private productsEven: IProduct[]
+  public order: IOrder;
+  public productsOdd: IProduct[];
+  public productsEven: IProduct[];
 
   constructor(
     private activateRoute: ActivatedRoute,
@@ -26,7 +26,8 @@ export class OrderDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    const orderId = parseInt(this.activateRoute.snapshot.params['id']);
+    const routeOrderId = this.activateRoute.snapshot.params['id'];
+    const orderId = +routeOrderId;
     this.ordersServiceService.getById(orderId)
       .subscribe(order => {
         this.order = order;
